@@ -4,8 +4,8 @@ $(function() {
 		var popup = $(this).attr("href");
 		var layer = $("#popup-layer");
    		
-   		$(popup).fadeIn(300);
    		$(layer).fadeIn(300);
+   		$(popup).fadeIn(300);
     });
 
 	$(".exit").on("click", dismiss);
@@ -30,22 +30,22 @@ $(function() {
     })
     
 	// Sponsor wheel	
-	var curr = 1;
+	var curr = 0;
 
 	var $wheel = $("#wheel");
-	var $sponsorContainer = $wheel.find(".sponsors");
-	var $sponsors = $sponsorContainer.find(".sponsor");
+	var $container = $wheel.find("#sponsor-container");
+	var $sponsor = $container.find(".sponsor");
 	
-	/*
+	
 	setInterval(function() {
-		var width = $sponsors[curr];
-		$("#wheel .sponsors").animate({"margin-left": "-=12em"}, 1000, function() {
+		var width = "12em";
+		$container.animate({"margin-top": "-="+width}, 1000, function() {
 			curr++;
-			if (curr === $sponsors.length) {
-				curr = 1;
-				$sponsorContainer.css("margin-left", "0");
+			if (curr === $sponsor.length) {
+				curr = 0;
+				$container.css("margin-top", "0");
 			}
 		});
 	}, 3000);
-	*/
+	
 })
