@@ -1,6 +1,6 @@
 $(function() {
 	// Popup windows
-	$("a.thumbnail").on("click", function() {
+	$("a.thumbnail, #sponsor-container").on("click", function() {
 		var popup = $(this).attr("href");
 		var layer = $("#popup-layer");
    		
@@ -13,22 +13,25 @@ $(function() {
 
 	function dismiss() {
     	$(".popup, #popup-layer").fadeOut(300);
-    }
+    }	
+})
 
-    var $enlarge = $("#enlarge");
+$(function() {
+	var $enlarge = $("#enlarge");
     var $smaller = $("#smaller");
-    var $Form = $("#Form");
     $enlarge.on("click", function() {
-    	$Form.addClass("enlarged");
+    	$(this).parent().addClass("enlarged");
     	$enlarge.fadeOut();
     	$smaller.fadeIn();
     })
     $smaller.on("click", function() {
-    	$Form.removeClass("enlarged");
+    	$(this).parent().removeClass("enlarged");
     	$smaller.fadeOut();
     	$enlarge.fadeIn();
     })
-    
+})
+
+$(function() {
 	// Sponsor wheel	
 	var curr = 0;
 
@@ -46,6 +49,5 @@ $(function() {
 				$container.css("margin-top", "0");
 			}
 		});
-	}, 3000);
-	
+	}, 2000);
 })

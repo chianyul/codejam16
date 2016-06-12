@@ -1,9 +1,9 @@
 * { box-sizing: border-box; 
 -webkit-box-sizing: border-box; }
 
+html { background: #ddd url("img/bg4.jpg") no-repeat fixed; }
+
 html, body {
-	background-color: #ddd;
-	background-image: url("img/pattern.jpg");
 	font-family: 'Arvo', serif;
 	margin: 0;
 	padding: 0;
@@ -103,8 +103,7 @@ html, body {
 #Form.enlarged { height: 95vh; }
 
 @media (min-width: 80em) {
-	#tile-container { margin: 7em auto; width: 60%; 
-		box-sizing: content-box; border: 1px solid pink; }
+	#tile-container { margin: 7em auto; width: 60%; }
 
 	.col25 	{ float: left; width: 25%; }
 	.col50 	{ float: left; width: 50%; }		
@@ -120,7 +119,7 @@ html, body {
 }
 
 .thumbnail {
-	border: 1px solid #999;
+	border: 1px solid #ccc;
 	-webkit-border-radius: 0.5em;
 	   -moz-border-radius: 0.5em;
 			border-radius: 0.5em;
@@ -325,35 +324,36 @@ section > h1 {
 }
 
 #sponsor-container {
-	height: 96em;
+	cursor: pointer;
+	height: 108em;
 	width: 100%;
 	margin: 0;
 	overflow: hidden;
 }
 
-.frame {
-	border: 1px solid green;
+#sponsor-container .frame {
+	//border: 1px solid green;
 	display: block;
 	height: 12em;
 	width: 100%;
 	text-align: center;
 }
 
-#wheel .sponsor {
-	border: 1px solid purple;
+.sponsor {
+	border: 1px solid pink;
 	display: inline-block;
 	max-width: 90%;
 	overflow: hidden;
 }
 
-#wheel .giga { margin: 1em auto; width: auto; height: 10em; }
-#wheel .mega { margin: 3em auto; width: auto; height: 6em; }
-#wheel .kilo { margin: 4em auto; width: auto; height: 4em; }
-
-#wheel img { 
+.sponsor img { 
 	max-height: 100%;
 	max-width: 100%;
 }
+
+.giga { margin: 1em auto; width: auto; height: 10em; }
+.mega { margin: 3em auto; width: auto; height: 6em; }
+.kilo { margin: 4em auto; width: auto; height: 4em; }
 
 
 /*-----Footer-----*/
