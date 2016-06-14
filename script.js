@@ -1,6 +1,6 @@
+// Popup windows
 $(function() {
-	// Popup windows
-	$("a.thumbnail, #sponsor-container").on("click", function() {
+	$("a.thumbnail, #frame-collection").on("click", function() {
 		var popup = $(this).attr("href");
 		var layer = $("#popup-layer");
    		
@@ -12,10 +12,14 @@ $(function() {
     $("#popup-layer").on("click", dismiss);
 
 	function dismiss() {
-    	$(".popup, #popup-layer").fadeOut(300);
+    	$(".popup").fadeOut(300);
+		$("#popup-layer").fadeOut(300);
     }	
 })
 
+
+
+// Popup "enlarge" button
 $(function() {
 	var $enlarge = $("#enlarge");
     var $smaller = $("#smaller");
@@ -31,12 +35,14 @@ $(function() {
     })
 })
 
+
+
+// Sponsor wheel	
 $(function() {
-	// Sponsor wheel	
 	var curr = 0;
 
 	var $wheel = $("#wheel");
-	var $container = $wheel.find("#sponsor-container");
+	var $container = $wheel.find("#frame-collection");
 	var $sponsor = $container.find(".sponsor");
 	
 	

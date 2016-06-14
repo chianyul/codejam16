@@ -78,7 +78,7 @@ html, body {
 .col100 .wide 	{ width: 99%; padding-bottom: 48%; }
 
 .social { float: left; }
-.social img {opacity: 0;}
+.social img { opacity: 0; }
 .social .thumbnail {
 	background: rgba(255, 255, 255, 0.3) url('social_sprite.png');
 	background-repeat: no-repeat;
@@ -89,38 +89,34 @@ html, body {
 #TW { background-position: 33.3% 28.5%; }
 #IN { background-position: 33.3% 57.4%; margin-top: 2%; }
 #EM { background-position: 0 100%; margin-top: 2%; }
-//#FB:hover {background-position: 100% 14.2%; }
-//#TW:hover {background-position: 100% 28.5%; }
-//#IN:hover {background-position: 100% 57.4%; }
-//#EM:hover {background-position: 100% 100%; }
+/*#FB:hover {background-position: 100% 14.2%; }*/
+/*#TW:hover {background-position: 100% 28.5%; }*/
+/*#IN:hover {background-position: 100% 57.4%; }*/
+/*#EM:hover {background-position: 100% 100%; }*/
 
 #gallery { margin: 1% 0.5%; }
 
 .content h1 { font: 100 10vmin 'Lato', sans-serif; }
 
 .popup { margin: 10vh 10%; width: 80%; }
-.popup.enlarged { margin: 2.5vh 2.5%; width: 95%; }
-#Form { height: 80vh; }
-#Form.enlarged { height: 95vh; }
+.popup.enlarged { margin: 2.5vh 2.5%; width: 95%; height: 95vh; }
 
 @media (min-width: 80em) {
-	#tile-container { margin: 7em auto; width: 60%; }
+	#tile-container { margin: 7em auto; width: 50%; }
 
 	.col25 	{ float: left; width: 25%; }
 	.col50 	{ float: left; width: 50%; }		
 	.col100	{ display: inline-block; width: 100%; }
 
-	#gallery {margin: 0.5%;}
-
-	.content h1 { font: 100 10vmin 'Lato', sans-serif; }
+	#gallery { margin: 0.5%; }
 
 	.popup { margin: 10vh 25%; width: 50%; }
-	.popup.enlarged { margin: 2.5vh 5%; width: 90%; }
+	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
 
 }
 
 .thumbnail {
-	border: 1px solid #ccc;
+	border: 1px solid #aaa;
 	-webkit-border-radius: 0.5em;
 	   -moz-border-radius: 0.5em;
 			border-radius: 0.5em;
@@ -231,7 +227,7 @@ html, body {
 
 .popup-body {
 	background: rgba(0, 0, 0, 0.8);
-	max-height: 60vh;
+	max-height: 70vh;
 	overflow: auto;
 	padding: 1em;
 	position: relative;
@@ -244,30 +240,52 @@ html, body {
 	text-align: right; 
 }
 
-.popup h2 {
+#popup-container h2 {
 	color: #fff;
 	font: 300 2em 'Lato', sans-serif;
 	margin: 0;
 }
 
-.popup h3 {
+#popup-container h3 {
 	color: #fff;
 	font: 300 1em 'Lato', sans-serif;
 	margin: 0;
 }
 
-.popup p, .popup li {
+#popup-container p, #popup-container li {
 	color: #ddd;
 	font: 300 1em 'Lato', sans-serif;
 }
 
-.popup button {
+#popup-container button {
 	background: transparent;
 	border: none;
 	color: #ddd;
 	cursor: pointer;
 	font: 300 1em 'Lato', sans-serif;
 }
+
+#popup-container button.resizing {
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 100%;	
+	position: absolute;
+	top: 1em;
+	right: 2em;
+	transform: rotate(-45deg);
+	height: 2em;
+	width: 2em;
+}
+
+#Form:not(.enlarged) { height: 80vh; }
+
+#Sponsors .popup-body { text-align: center; }
+#Sponsors .sponsor {
+	display: inline-block;
+	margin: 1em;
+}
+#Sponsors .giga { height: 8em; }
+#Sponsors .mega { height: 6em; }
+#Sponsors .kilo { height: 4em; }
 
 #popup-layer {
 	background: rgba(0, 0, 0, 0.25);
@@ -278,17 +296,6 @@ html, body {
 	width: 100%;
 	height: 100%;
 	z-index: 2;
-}
-
-button.resizing {
-	background-color: rgba(0, 0, 0, .5);
-	border-radius: 100%;	
-	position: absolute;
-	top: 1em;
-	right: 2em;
-	transform: rotate(-45deg);
-	height: 2em;
-	width: 2em;
 }
 
 #smaller { display: none; }
@@ -310,7 +317,7 @@ button.resizing {
 */
 
 /*-----Sponsors-----*/
-section > h1 {
+#sponsorship-container h1 {
 	color: #000;
 	text-shadow: 1px 1px #bbb;
 	text-align: center;
@@ -327,7 +334,7 @@ section > h1 {
 	overflow: hidden;
 }
 
-#sponsor-container {
+#frame-collection {
 	cursor: pointer;
 	height: 108em;
 	width: 100%;
@@ -335,8 +342,8 @@ section > h1 {
 	overflow: hidden;
 }
 
-#sponsor-container .frame {
-	//border: 1px solid green;
+#frame-collection .frame {
+	/*border: 1px solid green;*/
 	display: block;
 	height: 12em;
 	width: 100%;
@@ -344,7 +351,7 @@ section > h1 {
 }
 
 .sponsor {
-	//border: 1px solid pink;
+	/*border: 1px solid pink;*/
 	display: inline-block;
 	max-width: 90%;
 	overflow: hidden;
@@ -355,9 +362,9 @@ section > h1 {
 	max-width: 100%;
 }
 
-.giga { margin: 1em auto; width: auto; height: 10em; }
-.mega { margin: 3em auto; width: auto; height: 6em; }
-.kilo { margin: 4em auto; width: auto; height: 4em; }
+.sponsor.giga { margin: 1em auto; width: auto; height: 10em; }
+.sponsor.mega { margin: 3em auto; width: auto; height: 6em; }
+.sponsor.kilo { margin: 4em auto; width: auto; height: 4em; }
 
 
 /*-----Footer-----*/
