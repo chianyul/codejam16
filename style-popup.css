@@ -69,7 +69,7 @@
 	font: 300 1em 'Lato', sans-serif;
 }
 
-#popup-container button {
+.footer-button {
 	background-color: rgba(0, 0, 0, .3);
 	border: none;
 	border-radius: 1em;
@@ -80,30 +80,23 @@
 	padding: .25em .5em;
 }
 
-#popup-container button:hover {
+.footer-button:hover {
 	background-color: rgba(100, 100, 100, .3);
 	box-shadow: 0 0 3px 0 #bbb;	
 }
 
-#Form button.resizing {
+.header-button {
 	background-color: rgba(0, 0, 0, .5);
-	border-radius: 100%;	
+	border: none;
+	border-radius: 100%;
+	box-shadow: 0 0 1px #fff;
 	position: absolute;
-	top: 1em;
-	right: 5em;
 	transform: rotate(-45deg);
 	height: 2em;
 	width: 2em;
 }
-
-#Form button.exit {
-	background-color: rgba(0, 0, 0, .5);
-	position: absolute;
-	top: 1em;
-	right: 2em;
-	height: 2em;
-	width: 2em;
-}
+.header-button.resizing { top: 1em; right: 5em; }
+.header-button.exit { top: 1em; right: 2em; }
 
 #Form:not(.enlarged) { height: 80vh; }
 
@@ -111,6 +104,10 @@
 #Sponsors .sponsor {
 	display: inline-block;
 	margin: 1em;
+}
+
+#Ask .popup-body {
+	color: #fff;
 }
 
 #popup-layer {
@@ -124,9 +121,14 @@
 	z-index: 2;
 }
 
-#smaller { display: none; }
+.resizing {
+	background-image: rgba(0, 0, 0, 0.5) url('tool_sprite.png');
+	background-repeat: no-repeat;
+	background-size: 700%;
+}
 
-
+#enlarge { background-position: 20% 20%; }
+#smaller { background-position: 0% 40%;	display: none; }
 
 
 /*-----Sponsors-----*/
@@ -174,7 +176,7 @@
 
 .sponsor img { 
 	height: 100%;
-	width: 100%;
+	max-width: 100%;
 }
 
 .sponsor.giga { margin: 1em auto; width: auto; height: 10em; }

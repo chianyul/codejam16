@@ -26,6 +26,7 @@ header h1 img {
 /*-----Navigation-----*/
 #icon {
 	box-shadow: 0 5px 8px rgba(0, 0, 0, .8);
+	cursor: pointer;
 	position: fixed;
 	left: -1.5em;
 	top: -1em;
@@ -126,6 +127,8 @@ header h1 img {
 
 @media (min-width: 70em) {
 	#icon { width: 7em; height: 7em; }
+	#icon:hover { left: -1em; top: -.5em; }
+
 	#menu { width: 20%; left: 2.5%; }
 
 	#tile-container { margin: 2em auto 7em; width: 50%; }

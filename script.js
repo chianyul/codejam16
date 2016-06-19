@@ -2,7 +2,7 @@
 $(function() {
 	var $menu = $("#menu");
 	var $icon = $("#icon");
-	var $layer = $("#popup-layer");
+	var layer = $("#popup-layer");
 	/*
 	$icon.on("mouseenter", function() {
     	$menu.slideDown();
@@ -11,32 +11,30 @@ $(function() {
     	$menu.slideUp();
     })
     */
+
     $icon.on("click", function() {
-    	$layer.fadeToggle();
+    	$(layer).fadeToggle();
     	$icon.toggleClass("icon-hover");
     	$menu.slideToggle();
+    })
 
-	$(".thumbnail").on("click", pop_out);
-	$("#frame-collection").on("click", pop_out);
+	$(".pop").on("click", pop_out);
 	$(".menu-link").on("click", pop_out);
 
-	var $layer = $("#popup-layer");
-
     function pop_out() {
-    	var $popup = $(this).attr("href");	
-   		
-   		$layer.fadeIn();
-   		$popup.fadeIn();
+    	var popup = $(this).attr("href");	 		
+   		$(layer).fadeIn();
+   		$(popup).fadeIn();
     }
 
 	$(".exit").on("click", dismiss);
     $("#popup-layer").on("click", dismiss);
 
 	function dismiss() {
-    	$(".popup").fadeOut();
-		$layer.fadeOut();
-		$icon.removeClass("icon-hover");
+    	$(".popup").fadeOut();		
 		$menu.slideUp();
+		$icon.removeClass("icon-hover");
+		$(layer).fadeOut();
     }	
 })
 

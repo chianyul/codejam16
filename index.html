@@ -34,33 +34,33 @@
 	<section id="tile-container">		
 		<div class="row">
 			<div class="col50">
-				<a href="#About" class="thumbnail wide"">
+				<div href="#About" class="thumbnail wide pop">
 					<img src="img/trottier.jpg" alt=""/>
 					<div class="content"><div class="table"><h1>About</h1></div></div>
-				</a>
+				</div>
 			</div>		
 			<div class="col50">
-				<div href="#" class="thumbnail medium">
+				<div href="#" class="thumbnail medium nopop">
 					<img src="img/poster.jpg" alt=""/>
 					<div class="content"><div class="table"><h1>Date</h1></div></div>
 				</div><!--
-			 --><a href="#FAQs" class="thumbnail medium">
+			 --><div href="#FAQs" class="thumbnail medium pop">
 					<img src="img/presentation2.jpg" alt=""/>
 					<div class="content"><div class="table"><h1>FAQs</h1></div></div>
-				</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col50">
-				<a href="#Event1" class="thumbnail medium"">
+				<div href="#Event1" class="thumbnail medium pop">
 					<img src="img/techtalk.jpg" alt="">
 					<div class="content"><div class="table"><h1>Tech Talk</h1></div></div>
-				</a><!--
-			 --><a href="#Event2" class="thumbnail medium">
+				</div><!--
+			 --><div href="#Event2" class="thumbnail medium pop">
 					<img src="img/networking.jpg" alt="">
 					<div class="content"><div class="table"><h1>Tech Fair</h1></div></div>
-				</a>
+				</div>
 			</div><!--			
 		 --><div class="col50">
 				<div class="thumbnail wide">
@@ -78,14 +78,14 @@
 				</div>
 					</div><!--
 			 --><div class="col50">
-				<a href="#Form" class="thumbnail medium" data-rel="popup" >							
+				<div href="#Form" class="thumbnail medium pop" data-rel="popup" >							
 					<img src="img/wristband.jpg" alt="">
 					<div class="content"><div class="table"><h1>Join</h1></div></div>
-				</a><!--
-			 --><a href="#Pay" class="thumbnail medium">
+				</div><!--
+			 --><div href="#Pay" class="thumbnail medium pop">
 					<img src="img/breakfast.jpg" alt="">
 					<div class="content"><div class="table"><h1>Pay</h1></div></div>
-				</a>
+				</div>
 			</div>
 		</div>
 
@@ -125,7 +125,7 @@
 				<p>McGill University's Electrical, Computer and Software Engineering Student Society (ECSESS) is collaborating with some of Montreal's biggest software companies to make a challenging, real-world application problem for you to solve. ECSESS's largest event is back for its sixth year and this time it's all about bioinformatics.</p>
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>
+				<button class="footer-button exit">Close</button>
 			</div>
 		</div>
 
@@ -142,7 +142,7 @@
 				<h3>Question 6</h3><p>Answer 6</p>
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>				
+				<button class="footer-button exit">Close</button>				
 			</div>
 		</div>
 
@@ -156,7 +156,7 @@
 				<h3>Company 3</h3><p>Event description 3</p>
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>
+				<button class="footer-button exit">Close</button>
 			</div>
 		</div>
 
@@ -177,10 +177,10 @@
 			</div>
 		</div>		
 
-		<div id="Form" class="popup fade" tabindex="-1">
-			<button class="resizing" id="enlarge"><></button>
-			<button class="resizing" id="smaller">><</button>
-			<button class="exit">x</button>
+		<div id="Form" class="popup fade" tabindex="-1">			
+			<button class="header-button resizing" id="enlarge"></button>
+			<button class="header-button resizing" id="smaller"></button>
+			<button class="header-button exit">x</button>
 			<iframe src="https://docs.google.com/forms/d/1w7KlP-YzDP-fk4gv9b7gDIQS7fgLIvP9Jvt3PtUkl0I/viewform?embedded=true" width="100%" height="100%"></iframe>
 		</div>
 
@@ -193,7 +193,7 @@
 				<a href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="sponsors/logo_tilt.png" style="width:5em;"/></a>
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>
+				<button class="footer-button exit">Close</button>
 			</div>
 		</div>
 
@@ -225,7 +225,7 @@
 				</a>
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>
+				<button class="footer-button exit">Close</button>
 			</div>
 		</div>
 
@@ -234,12 +234,16 @@
 				<h2>Ask a Question</h2>
 			</div>
 			<div class="popup-body">
-				<input>Email</input>
-				<input>Question</input>
+				<div id="Ask-email">
+					<input></input>
+				</div>
+				<div id="Ask-question">
+					<input></input>
+				</div>
 			</div>
 			<div class="popup-footer">
-				<button class="submit">Submit</button>
-				<button class="exit">Close</button>				
+				<button class="footer-button submit">Submit</button>
+				<button class="footer-button exit">Close</button>				
 			</div>
 		</div>
 
@@ -253,7 +257,7 @@
 	<section id="sponsorship-container">
 		<h1>A Big Thank You to Our Generous Sponsors</h1>
 		<div id="wheel">
-			<div id="frame-collection" href="#Sponsors">
+			<div id="frame-collection" href="#Sponsors" class="pop">
 				<div class="frame">
 					<div class="sponsor giga"><img src="sponsors/logo_morgan.png" alt="morgan"></div>
 				</div>
