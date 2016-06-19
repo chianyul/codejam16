@@ -8,21 +8,23 @@
 	<meta name="keywords" content="codejam, mcgill, ecsess, coding, competition"/>
 	<link rel="icon" href = "codejam.ico"/>
 
-	<link href='https://fonts.googleapis.com/css?family=Lato:100,300|Arvo' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' href='style.css'/>				
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,500|Arvo" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style-main.css"/>
+	<link rel="stylesheet" href="style-popup.css"/>
 </head>	
 
 <body>
 	<header>
-		<nav class="navbar">
-			
-			<div class="collapse">
-				<ul>
-					<li><a href="#">Code.Jam()</a>
-					<li><a href="#">Sponsors</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>				
+		<h1>Code.Jam() 2016</h1>
+		<div><img id="icon" src="codejam.ico"/></div>
+		<nav id="menu">			
+			<ul>
+				<li>Menu</li>
+				<li class="menu-link">Code.Jam()</li>
+				<li class="menu-link">Sponsors</li>
+				<li class="menu-link">Contact</li>
+				<li class="menu-link" href="#Ask">Ask a question</li>
+			</ul>
 		</nav>			
 	</header>
 
@@ -119,7 +121,8 @@
 				<h2>About</h2>
 			</div>
 			<div class="popup-body">
-				<p>CodeJam is a 48-hour team-based programming competition fueled by great minds and energy drinks. <br> McGill University's Electrical, Computer and Software Engineering Student Society (ECSESS) is collaborating with some of Montreal's biggest software companies to make a challenging, real-world application problem for you to solve. ECSESS's largest event is back for its sixth year and this time it's all about bioinformatics.</p>
+				<p>CodeJam is a 48-hour team-based programming competition fueled by great minds and energy drinks.</p>
+				<p>McGill University's Electrical, Computer and Software Engineering Student Society (ECSESS) is collaborating with some of Montreal's biggest software companies to make a challenging, real-world application problem for you to solve. ECSESS's largest event is back for its sixth year and this time it's all about bioinformatics.</p>
 			</div>
 			<div class="popup-footer">
 				<button class="exit">Close</button>
@@ -139,7 +142,7 @@
 				<h3>Question 6</h3><p>Answer 6</p>
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>
+				<button class="exit">Close</button>				
 			</div>
 		</div>
 
@@ -177,6 +180,7 @@
 		<div id="Form" class="popup fade" tabindex="-1">
 			<button class="resizing" id="enlarge"><></button>
 			<button class="resizing" id="smaller">><</button>
+			<button class="exit">x</button>
 			<iframe src="https://docs.google.com/forms/d/1w7KlP-YzDP-fk4gv9b7gDIQS7fgLIvP9Jvt3PtUkl0I/viewform?embedded=true" width="100%" height="100%"></iframe>
 		</div>
 
@@ -225,6 +229,20 @@
 			</div>
 		</div>
 
+		<div id="Ask" class="popup" tabindex="-1">
+			<div class="popup-header">
+				<h2>Ask a Question</h2>
+			</div>
+			<div class="popup-body">
+				<input>Email</input>
+				<input>Question</input>
+			</div>
+			<div class="popup-footer">
+				<button class="submit">Submit</button>
+				<button class="exit">Close</button>				
+			</div>
+		</div>
+
 		<div id="popup-layer"></div>
 	</section>
 		
@@ -265,13 +283,18 @@
 				 </div>
 			 </div>
 		</div>
-		
+		<div id="blurb-container">
+			<h2>Sponsor ECSESS Code.Jam()</h2>
+			<p>We are a team of 100 students from a variety of disciplines. Mechanical engineering, electrical engineering, physics, and finance are but three of over 11 disciplines represented on our team. By supporting McGill Robotics, you are helping a team of enthusiastic students build, test, and compete internationally with our robots. In addition, you are aiding the training of future engineers, scientists, and businessmen via the opportunity to engage in hands on experience in their fields.</p>
+			<p>If you are interested in sponsoring McGill Robotics, please have a look at our sponsorship package and be sure to email us at <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a>.</p>
+			<a id="Package" href="sponsors/sponsorship_package.pdf" target="_blank"><img src="sponsors/sponsorship_package_icon.ico" alt="CodeJam 2016 Sponsorship Package"/></a> 
+		</div>
 	</section>
 		
 	<footer>
 		<div class="footer">
 			<p>Author: Chianyu</p>
-			<p>Contact information: <a href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a></p>
+			<p>Contact information: <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a></p>
 			<p>Copyright Electrical, Computer and Software Engineering Student Society of McGill University (ECSESS)</p>
 		</div>		  
 	</footer> 

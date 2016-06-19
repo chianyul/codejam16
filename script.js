@@ -1,19 +1,42 @@
-// Popup windows
+// Menu
 $(function() {
-	$("a.thumbnail, #frame-collection").on("click", function() {
-		var popup = $(this).attr("href");
-		var layer = $("#popup-layer");
+	var $menu = $("#menu");
+	var $icon = $("#icon");
+	var $layer = $("#popup-layer");
+	/*
+	$icon.on("mouseenter", function() {
+    	$menu.slideDown();
+    })
+    $menu.on("mouseleave", function() {
+    	$menu.slideUp();
+    })
+    */
+    $icon.on("click", function() {
+    	$layer.fadeToggle();
+    	$icon.toggleClass("icon-hover");
+    	$menu.slideToggle();
+
+	$(".thumbnail").on("click", pop_out);
+	$("#frame-collection").on("click", pop_out);
+	$(".menu-link").on("click", pop_out);
+
+	var $layer = $("#popup-layer");
+
+    function pop_out() {
+    	var $popup = $(this).attr("href");	
    		
-   		$(layer).fadeIn(300);
-   		$(popup).fadeIn(300);
-    });
+   		$layer.fadeIn();
+   		$popup.fadeIn();
+    }
 
 	$(".exit").on("click", dismiss);
     $("#popup-layer").on("click", dismiss);
 
 	function dismiss() {
-    	$(".popup").fadeOut(300);
-		$("#popup-layer").fadeOut(300);
+    	$(".popup").fadeOut();
+		$layer.fadeOut();
+		$icon.removeClass("icon-hover");
+		$menu.slideUp();
     }	
 })
 
