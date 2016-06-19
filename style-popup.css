@@ -106,9 +106,17 @@
 	margin: 1em;
 }
 
-#Ask .popup-body {
-	color: #fff;
+#Ask .popup-body { color: #fff }
+#Ask input {
+	display: inline-block;
+	margin: .5em 0;
 }
+#Ask-question {
+    height: 5em;
+    width: 100%;
+    text-align: top;
+}
+
 
 #popup-layer {
 	background: rgba(0, 0, 0, 0.25);

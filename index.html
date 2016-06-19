@@ -20,12 +20,11 @@
 		<nav id="menu">			
 			<ul>
 				<li>Menu</li>
-				<li class="menu-link">Code.Jam()</li>
-				<li class="menu-link">Sponsors</li>
-				<li class="menu-link">Contact</li>
-				<li class="menu-link" href="#Ask">Ask a question</li>
+				<li class="menu-link pop" href="#Ask">Ask a question</li>
+				<li class="menu-link pop" href="#">Feedback</li>
+				<a class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
-		</nav>			
+		</nav>
 	</header>
 
 
@@ -40,7 +39,7 @@
 				</div>
 			</div>		
 			<div class="col50">
-				<div href="#" class="thumbnail medium nopop">
+				<div id="date" href="#" class="thumbnail medium nopop">
 					<img src="img/poster.jpg" alt=""/>
 					<div class="content"><div class="table"><h1>Date</h1></div></div>
 				</div><!--
@@ -181,7 +180,9 @@
 			<button class="header-button resizing" id="enlarge"></button>
 			<button class="header-button resizing" id="smaller"></button>
 			<button class="header-button exit">x</button>
+			<!--
 			<iframe src="https://docs.google.com/forms/d/1w7KlP-YzDP-fk4gv9b7gDIQS7fgLIvP9Jvt3PtUkl0I/viewform?embedded=true" width="100%" height="100%"></iframe>
+			-->
 		</div>
 
 		<div id="Pay" class="popup fade" tabindex="-1">
@@ -234,12 +235,11 @@
 				<h2>Ask a Question</h2>
 			</div>
 			<div class="popup-body">
-				<div id="Ask-email">
-					<input></input>
-				</div>
-				<div id="Ask-question">
-					<input></input>
-				</div>
+				<p>If you have any questions not answered in the FAQ section, please ask us here. We will answer you as soon as possible!</p>
+				<form>				
+					<h3>Email: <input type="text" name="email" id="Ask-email"/></h3>
+					<input type="text" name="question" id="Ask-question" placeholder="Your message..."/>	
+				</form>
 			</div>
 			<div class="popup-footer">
 				<button class="footer-button submit">Submit</button>
@@ -296,7 +296,7 @@
 	</section>
 		
 	<footer>
-		<div class="footer">
+		<div id="footer">
 			<p>Author: Chianyu</p>
 			<p>Contact information: <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a></p>
 			<p>Copyright Electrical, Computer and Software Engineering Student Society of McGill University (ECSESS)</p>
@@ -306,9 +306,9 @@
 		
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>	
 	<script src="script.js"></script>	
-
+	<!--
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="googleMap.js"></script>
-
+	-->
 	</body>
 </html>	

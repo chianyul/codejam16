@@ -1,19 +1,11 @@
-// Menu
+// Menu and Popups
 $(function() {
 	var $menu = $("#menu");
 	var $icon = $("#icon");
-	var layer = $("#popup-layer");
-	/*
-	$icon.on("mouseenter", function() {
-    	$menu.slideDown();
-    })
-    $menu.on("mouseleave", function() {
-    	$menu.slideUp();
-    })
-    */
+	var $layer = $("#popup-layer");
 
     $icon.on("click", function() {
-    	$(layer).fadeToggle();
+    	$layer.fadeToggle();
     	$icon.toggleClass("icon-hover");
     	$menu.slideToggle();
     })
@@ -23,7 +15,7 @@ $(function() {
 
     function pop_out() {
     	var popup = $(this).attr("href");	 		
-   		$(layer).fadeIn();
+   		$layer.fadeIn();
    		$(popup).fadeIn();
     }
 
@@ -34,8 +26,24 @@ $(function() {
     	$(".popup").fadeOut();		
 		$menu.slideUp();
 		$icon.removeClass("icon-hover");
-		$(layer).fadeOut();
+		$layer.fadeOut();
     }	
+})
+
+$(function() {
+    var $date = $("#date");
+    var $width = $date.width();
+    var $content = $date.find("h1");
+    var dateArray = new Array(
+        "Nov 20", 
+        "20 days till CodeJam</span>", 
+        "Date");
+    var i = 0;
+    $date.on("click", function() {    
+        $content.html(dateArray[i].toString());
+        i++;
+        if(i>2) { i=0; }
+    })
 })
 
 

@@ -61,13 +61,17 @@ header h1 img {
 	padding: 0;
 }
 
-#menu li {
+.menu-link {
 	border-bottom: 1px solid #555;
 	border-top: 1px solid #999;
 	color: #000;
 	font-size: 1em;
 	padding: 1em;
 	text-decoration: none;
+}
+
+a.menu-link {
+	display: block;
 }
 
 #menu li:first-child {
@@ -125,6 +129,8 @@ header h1 img {
 
 #gallery { margin: 1% 0.5%; }
 
+.content h1 { font: 100 15vmin 'Lato', sans-serif; }
+
 @media (min-width: 70em) {
 	#icon { width: 7em; height: 7em; }
 	#icon:hover { left: -1em; top: -.5em; }
@@ -138,6 +144,8 @@ header h1 img {
 	.col100	{ display: inline-block; width: 100%; }
 
 	#gallery { margin: 0.5%; }
+
+	.content h1 { font: 100 5em 'Lato', sans-serif; }
 }
 
 .thumbnail {
@@ -199,7 +207,6 @@ header h1 img {
 .content h1 {
 	color: #fff; 
 	display: table-cell;
-	font: 100 10vmin 'Lato', sans-serif; 
 	text-align: center; 
 	vertical-align: middle;
 }
@@ -247,7 +254,7 @@ header h1 img {
 */
 
 /*-----Footer-----*/
-.footer {
+#footer {
 	margin-top: 8em;
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
@@ -256,10 +263,9 @@ header h1 img {
 	width: 100%;
 }
 
-.email {
-	font: bold 1em 'Lato', sans-serif; 
-	color: #999;
-
+#footer .email {
+	color: #aaa;
+	font: bold 1em 'Lato', sans-serif;
 }
 
 .email:hover {
