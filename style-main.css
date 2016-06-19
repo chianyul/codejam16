@@ -145,7 +145,7 @@ a.menu-link {
 
 	#gallery { margin: 0.5%; }
 
-	.content h1 { font: 100 5em 'Lato', sans-serif; }
+	.content h1 { font: 100 5vmax 'Lato', sans-serif; }
 }
 
 .thumbnail {

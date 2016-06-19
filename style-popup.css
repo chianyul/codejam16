@@ -26,6 +26,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	outline: none;
 	z-index: 3;
 
 	-webkit-overflow-scrolling: touch;
@@ -81,7 +82,6 @@
 }
 
 .footer-button:hover {
-	background-color: rgba(100, 100, 100, .3);
 	box-shadow: 0 0 3px 0 #bbb;	
 }
 
@@ -90,6 +90,7 @@
 	border: none;
 	border-radius: 100%;
 	box-shadow: 0 0 1px #fff;
+	cursor: pointer;
 	position: absolute;
 	transform: rotate(-45deg);
 	height: 2em;
@@ -97,6 +98,9 @@
 }
 .header-button.resizing { top: 1em; right: 5em; }
 .header-button.exit { top: 1em; right: 2em; }
+.exit:hover { background-color: rgba(128, 0, 0, .5); }
+.submit:hover { background-color: rgba(0, 128, 0, .5); }
+.resizing:hover { background-color: rgba(0, 0, 128, .5); }
 
 #Form:not(.enlarged) { height: 80vh; }
 
