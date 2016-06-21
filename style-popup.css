@@ -7,7 +7,7 @@
 
 #blurb-container { width: 90%; padding: 1.5em; }
 
-@media (min-width: 80em) {
+@media (min-width: 70em) {
 	.popup { margin: 10vh 25%; width: 50%; }
 	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
 
@@ -78,6 +78,7 @@
 	color: #ddd;
 	cursor: pointer;
 	font: 300 1em 'Lato', sans-serif;
+	outline: none;
 	padding: .25em .5em;
 }
 
@@ -92,12 +93,13 @@
 	box-shadow: 0 0 1px #fff;
 	cursor: pointer;
 	position: absolute;
-	transform: rotate(-45deg);
 	height: 2em;
 	width: 2em;
+	outline: none;
 }
 .header-button.resizing { top: 1em; right: 5em; }
 .header-button.exit { top: 1em; right: 2em; }
+
 .exit:hover { background-color: rgba(128, 0, 0, .5); }
 .submit:hover { background-color: rgba(0, 128, 0, .5); }
 .resizing:hover { background-color: rgba(0, 0, 128, .5); }
@@ -133,14 +135,7 @@
 	z-index: 2;
 }
 
-.resizing {
-	background-image: rgba(0, 0, 0, 0.5) url('tool_sprite.png');
-	background-repeat: no-repeat;
-	background-size: 700%;
-}
-
-#enlarge { background-position: 20% 20%; }
-#smaller { background-position: 0% 40%;	display: none; }
+#smaller { display: none; }
 
 
 /*-----Sponsors-----*/
@@ -189,6 +184,14 @@
 .sponsor img { 
 	height: 100%;
 	max-width: 100%;
+
+	-webkit-filter: brightness(0) invert(1); 
+			filter: brightness(0) invert(1);
+}
+
+.sponsor img:hover {
+	-webkit-filter: none; 
+			filter: none;
 }
 
 .sponsor.giga { margin: 1em auto; width: auto; height: 10em; }

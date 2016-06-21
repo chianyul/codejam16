@@ -9,25 +9,28 @@
 	<link rel="icon" href = "codejam.ico"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,500|Arvo" rel="stylesheet" type="text/css">
+	<link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style-main.css"/>
 	<link rel="stylesheet" href="style-popup.css"/>
 </head>	
 
 <body>
 	<header>
-		<h1>Code.Jam() 2016</h1>
+		<div id="title-img">			
+		</div>
+
 		<div><img id="icon" src="codejam.ico"/></div>
 		<nav id="menu">			
 			<ul>
 				<li>Menu</li>
-				<li class="menu-link pop" href="#Ask">Ask a question</li>
-				<li class="menu-link pop" href="#">Feedback</li>
+				<li class="menu-link pop" href="#Ask"><i class="fa fa-question-circle fa-lg fa-fw" aria-hidden="true"></i> Ask a question</li>
+				<li class="menu-link pop" href="#"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
 				<a class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
 		</nav>
 	</header>
 
-
+	<noscript style="text-align:center;">For full functionality of this page it is necessary to enable JavaScript.</noscript>
 
 
 	<section id="tile-container">		
@@ -114,7 +117,7 @@
 		<p class="placeholder">placeholder</p>
 	</section>
 	
-	<section id="popup-container">
+	<div id="popup-container">
 		<div id="About" class="popup fade" tabindex="-1">
 			<div class="popup-header">
 				<h2>About</h2>
@@ -172,14 +175,20 @@
 				</ul>		
 			</div>
 			<div class="popup-footer">
-				<button class="exit">Close</button>
+				<button class="footer-button exit">Close</button>
 			</div>
 		</div>		
 
 		<div id="Form" class="popup fade" tabindex="-1">			
-			<button class="header-button resizing" id="enlarge"></button>
-			<button class="header-button resizing" id="smaller"></button>
-			<button class="header-button exit">x</button>
+			<button class="header-button resizing" id="enlarge">
+				<i class="fa fa-expand" aria-hidden="true" style="color:#fff;"></i>
+			</button>
+			<button class="header-button resizing" id="smaller">
+				<i class="fa fa-compress" aria-hidden="true" style="color:#fff;"></i>
+			</button>
+			<button class="header-button exit">
+				<i class="fa fa-times" aria-hidden="true" style="color:#fff;"></i>
+			</button>
 			<!--
 			<iframe src="https://docs.google.com/forms/d/1w7KlP-YzDP-fk4gv9b7gDIQS7fgLIvP9Jvt3PtUkl0I/viewform?embedded=true" width="100%" height="100%"></iframe>
 			-->
@@ -248,7 +257,7 @@
 		</div>
 
 		<div id="popup-layer"></div>
-	</section>
+	</div>
 		
 
 
@@ -310,6 +319,6 @@
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="googleMap.js"></script>
 	-->
-	<noscript>For full functionality of this page it is necessary to enable JavaScript.</noscript>
+	
 	</body>
 </html>	

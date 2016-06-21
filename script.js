@@ -33,11 +33,11 @@ $(function() {
 $(function() {
     var $date = $("#date");
     var $width = $date.width();
-    var $content = $date.find("h1");
+    var $content = $date.find(".table");
     var dateArray = new Array(
-        "Nov 20", 
-        "20 days till CodeJam</span>", 
-        "Date");
+        "<h1>Nov <span style=\"font-weight:300;\">20</span></h1>", 
+        "<h1 style=\"line-height:50%;\"><span style=\"font-weight:300;;\">20</span><span style=\"font-size:50%;\"> days till CodeJam</span></h1>", 
+        "<h1>Date</h1>");
     var i = 0;
     $date.on("click", function() {    
         $content.html(dateArray[i].toString());
