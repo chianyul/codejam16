@@ -27,7 +27,7 @@ $(function() {
 		$menu.slideUp();
 		$icon.removeClass("icon-hover");
 		$layer.fadeOut();
-    }	
+    }
 })
 
 $(function() {
@@ -72,8 +72,7 @@ $(function() {
 
 	var $wheel = $("#wheel");
 	var $container = $wheel.find("#frame-collection");
-	var $sponsor = $container.find(".sponsor");
-	
+	var $sponsor = $container.find(".sponsor");	
 	
 	setInterval(function() {
 		var width = "12em";
@@ -86,3 +85,26 @@ $(function() {
 		});
 	}, 2000);
 })
+
+
+// Entrance animation
+$(function() {
+	
+    $("#entrance").delay(4500).animate({"height":"0"}, 1000);
+    $("#title-img1").delay(4500).animate({"height":"0", "top":"0", "left":"0", "opacity":"0"}, 1500);
+    
+
+    $("#title-img3").delay(5000).animate({"height":"0", "top":"0", "left":"50%", "opacity":"0"}, 500);
+    $("#title-img4").delay(5000).animate({"height":"0", "top":"0", "left":"50%", "opacity":"0"}, 500);
+
+    
+    $("#icon").delay(5000).animate({"opacity":"1"}, 1000);
+    $("#title").delay(4500).animate({"width":"90%", "max-width":"40em"}, 1500);
+
+    timeoutID = window.setTimeout(mask, 5500);
+    function mask() {
+        $("#entrance").hide();
+    }
+})
+
+
