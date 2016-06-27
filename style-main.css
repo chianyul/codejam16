@@ -2,8 +2,10 @@
 	   -moz-box-sizing: border-box;	
 			box-sizing: border-box; }
 
-html { background: #ddd url("img/bg1.jpg") no-repeat fixed center; 
-	overflow-x: hidden; }
+html { 
+	background: #ddd url("img/bg1.jpg") no-repeat fixed center; 
+	overflow-x: hidden; 
+}
 
 body {
 	font-family: 'Arvo', serif;
@@ -18,6 +20,8 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	z-index: 1;
+
+	display: none;
 }
 
 #title-container {
@@ -45,6 +49,7 @@ body {
 	0% { filter: brightness(0) invert(1); -webkit-filter: brightness(0) invert(1); } 
 	100% { filter: none; -webkit-filter: none; }
 }
+
 
 
 /*-----Navigation-----*/
@@ -103,7 +108,7 @@ body {
 	border-bottom: 1px solid #555;
 	border-top: 1px solid #999;
 	color: #000;
-	font-size: 1em;
+	font-size: 1.2em;
 	padding: 1em;
 	text-decoration: none;
 }
@@ -130,7 +135,7 @@ a.menu-link {
 }
 
 
-/*-----Body Content-----*/
+/*-----Tiles-----*/
 .placeholder {display: inline-block; display: none; }
 
 #tile-container { margin: 1em auto 5em;	width: 90%; }
@@ -167,7 +172,7 @@ a.menu-link {
 
 #gallery { margin: 1% 0.5%; }
 
-.content h1 { font: 100 8vmax 'Lato', sans-serif; }
+.tile-title h1 { font: 100 8vmax 'Lato', sans-serif; }
 
 @media (min-width: 70em) {
 
@@ -186,7 +191,7 @@ a.menu-link {
 
 	#gallery { margin: 0.5%; }
 
-	.content h1 { font: 100 4.5vw 'Lato', sans-serif; }
+	.tile-title h1 { font: 100 4.5vw 'Lato', sans-serif; }
 }
 
 .thumbnail {
@@ -228,7 +233,7 @@ a.menu-link {
 			border-radius: inherit;
 }
 
-.content {
+.tile-title {
 	background: rgba(0, 0, 0, 0.5);
 	-webkit-border-radius: inherit;
 	   -moz-border-radius: inherit;
@@ -239,24 +244,16 @@ a.menu-link {
 	width: 100%;
 }
 
-.content .table {
+.tile-title .table {
 	display:table;
 	height: 100%;
 	width: 100%;
 }
 
-.content h1 {
+.tile-title h1 {
 	color: #fff; 
 	display: table-cell;
 	text-align: center; 
-	vertical-align: middle;
-}
-
-.content p {
-	color: white;
-	font: 100 1em 'Lato', sans-serif;
-	display: table-cell;
-	text-align: left; 
 	vertical-align: middle;
 }
 

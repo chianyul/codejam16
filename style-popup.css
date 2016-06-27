@@ -61,6 +61,12 @@
 
 #popup-container h3 {
 	color: #fff;
+	font: 300 1.5em 'Lato', sans-serif;
+	margin: .5em;
+}
+
+#popup-container h4 {
+	color: #fff;
 	font: 300 1em 'Lato', sans-serif;
 	margin: 0;
 }
@@ -78,6 +84,7 @@
 	color: #ddd;
 	cursor: pointer;
 	font: 300 1em 'Lato', sans-serif;
+	margin: 0 .25em;
 	outline: none;
 	padding: .25em .5em;
 }
@@ -92,10 +99,10 @@
 	border-radius: 100%;
 	box-shadow: 0 0 1px #fff;
 	cursor: pointer;
-	position: absolute;
-	height: 2em;
-	width: 2em;
+	height: 2em; width: 2em;
+	margin: 0 .25em;
 	outline: none;
+	position: absolute;
 }
 .header-button.resizing { top: 1em; right: 5em; }
 .header-button.exit { top: 1em; right: 2em; }
@@ -123,6 +130,27 @@
     text-align: top;
 }
 
+#Team ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.profile {
+	background: rgba(75, 75, 75, .3);
+	display: inline-block;
+	margin: 0 0 1em 0;
+	min-height: 8em; width: auto;
+}
+
+.profile p { margin: 1em; text-align: justify;}
+
+.profile-pic {
+	display: inline-block;
+	height: 8em; width: 8em;
+	float: left;
+	margin: 0 1em 0 0;
+}
 
 #popup-layer {
 	background: rgba(0, 0, 0, 0.25);
@@ -136,6 +164,7 @@
 }
 
 #smaller { display: none; }
+
 
 
 /*-----Sponsors-----*/

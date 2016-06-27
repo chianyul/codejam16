@@ -34,8 +34,10 @@
 		<nav id="menu">			
 			<ul>
 				<li>Menu</li>
+				<li class="menu-link" href="#"><i class="fa fa-newspaper-o fa-lg fa-fw" aria-hidden="true"></i> Announcements</li>
 				<li class="menu-link pop" href="#Ask"><i class="fa fa-question-circle fa-lg fa-fw" aria-hidden="true"></i> Ask a question</li>
 				<li class="menu-link pop" href="#"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
+				<li class="menu-link pop" href="#Team"><i class="fa fa-users fa-lg fa-fw" aria-hidden="true"></i> Our team</li>
 				<a class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
 		</nav>
@@ -49,17 +51,17 @@
 			<div class="col50">
 				<div href="#About" class="thumbnail wide pop">
 					<img src="img/trottier.jpg" alt=""/>
-					<div class="content"><div class="table"><h1>About</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>About</h1></div></div>
 				</div>
 			</div>		
 			<div class="col50">
 				<div id="date" href="#" class="thumbnail medium nopop">
 					<img src="img/poster.jpg" alt=""/>
-					<div class="content"><div class="table"><h1>Date</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Date</h1></div></div>
 				</div><!--
 			 --><div href="#FAQs" class="thumbnail medium pop">
 					<img src="img/presentation2.jpg" alt=""/>
-					<div class="content"><div class="table"><h1>FAQs</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>FAQs</h1></div></div>
 				</div>
 			</div>
 		</div>
@@ -68,11 +70,11 @@
 			<div class="col50">
 				<div href="#Event1" class="thumbnail medium pop">
 					<img src="img/techtalk.jpg" alt="">
-					<div class="content"><div class="table"><h1>Tech Talk</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Tech Talk</h1></div></div>
 				</div><!--
 			 --><div href="#Event2" class="thumbnail medium pop">
 					<img src="img/networking.jpg" alt="">
-					<div class="content"><div class="table"><h1>Tech Fair</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Tech Fair</h1></div></div>
 				</div>
 			</div><!--			
 		 --><div class="col50">
@@ -87,17 +89,17 @@
 			<div class="col50">
 				<div class="thumbnail large">
 					<img src="img/saki.jpg" alt="">
-					<div class="content"><div class="table"><h1>Schedule</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Schedule</h1></div></div>
 				</div>
 					</div><!--
 			 --><div class="col50">
 				<div href="#Form" class="thumbnail medium pop" data-rel="popup" >							
 					<img src="img/wristband.jpg" alt="">
-					<div class="content"><div class="table"><h1>Join</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Join</h1></div></div>
 				</div><!--
 			 --><div href="#Pay" class="thumbnail medium pop">
 					<img src="img/breakfast.jpg" alt="">
-					<div class="content"><div class="table"><h1>Pay</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Pay</h1></div></div>
 				</div>
 			</div>
 		</div>
@@ -112,7 +114,7 @@
 			<div class="col25">
 				<div class="thumbnail large"><a href="#">
 					<img src="img/message.jpg" alt=""></a>
-					<div class="content"><div class="table"><h1>Live</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Live</h1></div></div>
 				</div>
 			</div>
 		</div>	
@@ -120,12 +122,10 @@
 			<div class="col100">
 				<div class="thumbnail wide" id="gallery">
 					<img src="img/poster.jpg" alt=""/>
-					<div class="content"><div class="table"><h1>Gallery</h1></div></div>
+					<div class="tile-title"><div class="table"><h1>Gallery</h1></div></div>
 				</div>
 			</div>
 		</div>
-
-		<p class="placeholder">placeholder</p>
 	</section>
 	
 	<div id="popup-container">
@@ -147,12 +147,12 @@
 				<h2>FAQs</h2>
 			</div>
 			<div class="popup-body">
-				<h3>Question 1</h3><p>Answer 1</p>
-				<h3>Question 2</h3><p>Answer 2</p>
-				<h3>Question 3</h3><p>Answer 3</p>
-				<h3>Question 4</h3><p>Answer 4</p>
-				<h3>Question 5</h3><p>Answer 5</p>
-				<h3>Question 6</h3><p>Answer 6</p>
+				<h4>Question 1</h4><p>Answer 1</p>
+				<h4>Question 2</h4><p>Answer 2</p>
+				<h4>Question 3</h4><p>Answer 3</p>
+				<h4>Question 4</h4><p>Answer 4</p>
+				<h4>Question 5</h4><p>Answer 5</p>
+				<h4>Question 6</h4><p>Answer 6</p>
 			</div>
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>				
@@ -164,9 +164,9 @@
 				<h2>Tech Talks</h2>
 			</div>
 			<div class="popup-body">
-				<h3>Company 1</h3><p>Event description 1</p>
-				<h3>Company 2</h3><p>Event description 2</p>
-				<h3>Company 3</h3><p>Event description 3</p>
+				<h4>Company 1</h4><p>Event description 1</p>
+				<h4>Company 2</h4><p>Event description 2</p>
+				<h4>Company 3</h4><p>Event description 3</p>
 			</div>
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
@@ -264,6 +264,62 @@
 			<div class="popup-footer">
 				<button class="footer-button submit">Submit</button>
 				<button class="footer-button exit">Close</button>				
+			</div>
+		</div>
+
+		<div id="Team" class="popup" tabinde="-1">
+			<div class="popup-header">
+				<h2>The CodeJam Committee</h2>
+			</div>
+			<div class="popup-body">			
+				<div class="profile">
+					<img class="profile-pic" src="img/profile-pic/Alina.jpg"/>
+					<h3><span style="font-weight:bold">Chair</span> Alina</h3>
+					<p>Here are some placeholder description about Alina.
+					Here are some more placeholder description about Alina.
+					Here are some even more placeholder description about Alina.</p>
+				</div>
+				<div class="profile">
+					<img class="profile-pic" src="codejam.ico"/>
+					<h3><span style="font-weight:bold">President</span> Tony</h3>
+					<p>Here are some placeholder description about Tony.
+					Here are some more placeholder description about Tony.
+					Here are some even more placeholder description about Tony.</p>
+				</div>
+				<div class="profile">
+					<img class="profile-pic" src="img/profile-pic/Drake.jpg"/>
+					<h3><span style="font-weight:bold">Sponsorship</span> Drake</h3>
+					<p>You used to call me on my cell phone,
+					Late night when you need my love.
+					Call me on my cell phone,
+					Late night when you need my love.
+					I know when that hotline bling,
+					That can only mean one thing.
+					I know when that hotline bling,
+					That can only mean one thing.
+					</p>
+				</div>
+				<div class="profile">
+					<img class="profile-pic" src="img/profile-pic/RiRi.jpg"/>
+					<h3><span style="font-weight:bold">Logistics</span> RiRi</h3>
+					<p>Work, work, work, work, work, work. 
+					He said me haffi, work, work, work, work, work, work. 
+					He see me do mi, dirt, dirt, dirt, dirt, dirt, dirt.
+					So me put in work, work, work, work, work, work.
+					When you ah guh learn, learn, learn, learn, learn.
+					Meh nuh care if him hurt, hurt, hurt, hurt, hurting.</p>
+				</div>
+				<div class="profile">
+					<img class="profile-pic" src="img/profile-pic/Khaled.jpg"/>
+					<h3><span style="font-weight:bold">Motivation</span> DJ Khaled</h3>
+					<p>YOU SMART. YOU VERY SMART. YOU A GENIUS.</p>
+					<p>I TOOK THE WHOLE DOOR OFF, AND THE HINGES, AND I PUT IT IN THE F–KBOY’S HANDS. YOU CAN PUT THE HINGES ON THE HANDS, TOO.</p>
+					<p>WIN, WIN, WIN, NO MATTER WHAT</p>
+					<p>AND ANOTHER ONE.</p>
+				</div>
+			</div>
+			<div class="popup-footer">
+				<button class="footer-button exit">Close</button>
 			</div>
 		</div>
 
