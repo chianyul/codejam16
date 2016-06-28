@@ -19,28 +19,54 @@
 	<header>
 		<div id="entrance">
 			<div id="title-container">
-				<img id="title-img0" class="title-img" src="img/title-img0.png">
-				<img id="title-img1" class="title-img" src="img/title-img1.png">
-				<img id="title-img2" class="title-img" src="img/title-img2.png">
-				<img id="title-img3" class="title-img" src="img/title-img3.png">
-				<img id="title-img4" class="title-img" src="img/title-img4.png">
+				<img id="title-img0" class="title-img" src="img/header/title-img0.png">
+				<img id="title-img1" class="title-img" src="img/header/title-img1.png">
+				<img id="title-img2" class="title-img" src="img/header/title-img2.png">
+				<img id="title-img3" class="title-img" src="img/header/title-img3.png">
+				<img id="title-img4" class="title-img" src="img/header/title-img4.png">
 			</div>
-		</div>
-		
+		</div>		
 
-		<div><img id="icon" src="img/jar.png"/></div>
-		<div><img id="title" src="img/title.png"/></div>
+		<div><img id="icon" src="img/header/jar.png"/></div>
+		<div><img id="title" src="img/header/title.png"/ alt="Code.Jam()"></div>
 
 		<nav id="menu">			
 			<ul>
 				<li>Menu</li>
-				<li class="menu-link" href="#"><i class="fa fa-newspaper-o fa-lg fa-fw" aria-hidden="true"></i> Announcements</li>
+				<li class="menu-link" id="show-news"><i class="fa fa-newspaper-o fa-lg fa-fw" aria-hidden="true"></i> Announcements</li>
 				<li class="menu-link pop" href="#Ask"><i class="fa fa-question-circle fa-lg fa-fw" aria-hidden="true"></i> Ask a question</li>
 				<li class="menu-link pop" href="#"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
 				<li class="menu-link pop" href="#Team"><i class="fa fa-users fa-lg fa-fw" aria-hidden="true"></i> Our team</li>
 				<a class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
 		</nav>
+
+		<div id="news">
+			<div class="news-item">
+				<div class="news-header">
+					<h2>Feature update</h2>
+					<button class="header-button dismiss">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
+					</button>
+				</div>			
+				<div class="news-body daysLeft">
+					<p></p>
+				</div>
+			</div>
+
+			<div class="news-item">
+				<div class="news-header">
+					<h2>Feature update</h2>
+					<button class="header-button dismiss">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
+					</button>
+				</div>			
+				<div class="news-body">
+					<p>Added "Our team" menu item.</p>
+				</div>
+
+			</div>
+		</div>
 	</header>
 
 	<noscript style="text-align:center;">For full functionality of this page it is necessary to enable JavaScript.</noscript>
@@ -128,7 +154,7 @@
 		</div>
 	</section>
 	
-	<div id="popup-container">
+	<section id="popup-container">
 		<div id="About" class="popup fade" tabindex="-1">
 			<div class="popup-header">
 				<h2>About</h2>
@@ -211,7 +237,7 @@
 			</div>
 			<div class="popup-body">
 				<p>You can pay for your ticket in cash at the ECSESS Lounge or you can pay online by Tilt</p>
-				<a href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="sponsors/logo_tilt.png" style="width:5em;"/></a>
+				<a href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="img/sponsors/logo_tilt.png" style="width:5em;"/></a>
 			</div>
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
@@ -225,24 +251,24 @@
 			<div class="popup-body">
 				<h3>Gigabyte Sponsors</h3>
 				<a class="sponsor giga" href="https://morganstanley.com/">
-					<img src="sponsors/logo_morgan.png" alt="morgan">
+					<img src="img/sponsors/logo_morgan.png" alt="morgan">
 				</a>
 				<h3>Megabyte Sponsors</h3>
 				<a class="sponsor mega" href="https://kronos.com/">
-					<img src="sponsors/logo_kronos.png" alt="kronos">
+					<img src="img/sponsors/logo_kronos.png" alt="kronos">
 				</a>
 				<a class="sponsor mega" href="http://google.com/">
-					<img src="sponsors/logo_google.png" alt="google">
+					<img src="img/sponsors/logo_google.png" alt="google">
 				</a>
 				<h3>Kilobyte Sponsors</h3>
 				<a class="sponsor kilo" href="http://ormuco.com/">
-					<img src="sponsors/logo_ormuco.png" alt="ormuco">
+					<img src="img/sponsors/logo_ormuco.png" alt="ormuco">
 				</a>
 				<a class="sponsor kilo" href="http://www.wolfram.com/">
-					<img src="sponsors/logo_wolfram.png" alt="wolfram">
+					<img src="img/sponsors/logo_wolfram.png" alt="wolfram">
 				</a>
 				<a class="sponsor kilo" href="https://www.namecheap.com/">
-					<img src="sponsors/logo_namecheap.png" alt="namecheap">
+					<img src="img/sponsors/logo_namecheap.png" alt="namecheap">
 				</a>
 			</div>
 			<div class="popup-footer">
@@ -273,7 +299,7 @@
 			</div>
 			<div class="popup-body">			
 				<div class="profile">
-					<img class="profile-pic" src="img/profile-pic/Alina.jpg"/>
+					<img class="profile-pic" src="img/profile/Alina.jpg"/>
 					<h3><span style="font-weight:bold">Chair</span> Alina</h3>
 					<p>Here are some placeholder description about Alina.
 					Here are some more placeholder description about Alina.
@@ -287,7 +313,7 @@
 					Here are some even more placeholder description about Tony.</p>
 				</div>
 				<div class="profile">
-					<img class="profile-pic" src="img/profile-pic/Drake.jpg"/>
+					<img class="profile-pic" src="img/profile/Drake.jpg"/>
 					<h3><span style="font-weight:bold">Sponsorship</span> Drake</h3>
 					<p>You used to call me on my cell phone,
 					Late night when you need my love.
@@ -300,7 +326,7 @@
 					</p>
 				</div>
 				<div class="profile">
-					<img class="profile-pic" src="img/profile-pic/RiRi.jpg"/>
+					<img class="profile-pic" src="img/profile/RiRi.jpg"/>
 					<h3><span style="font-weight:bold">Logistics</span> RiRi</h3>
 					<p>Work, work, work, work, work, work. 
 					He said me haffi, work, work, work, work, work, work. 
@@ -310,7 +336,7 @@
 					Meh nuh care if him hurt, hurt, hurt, hurt, hurting.</p>
 				</div>
 				<div class="profile">
-					<img class="profile-pic" src="img/profile-pic/Khaled.jpg"/>
+					<img class="profile-pic" src="img/profile/Khaled.jpg"/>
 					<h3><span style="font-weight:bold">Motivation</span> DJ Khaled</h3>
 					<p>YOU SMART. YOU VERY SMART. YOU A GENIUS.</p>
 					<p>I TOOK THE WHOLE DOOR OFF, AND THE HINGES, AND I PUT IT IN THE F–KBOY’S HANDS. YOU CAN PUT THE HINGES ON THE HANDS, TOO.</p>
@@ -324,42 +350,38 @@
 		</div>
 
 		<div id="popup-layer"></div>
-	</div>
-		
-
-
-
+	</section>
 
 	<section id="sponsorship-container">
 		<h1>A Big Thank You to Our Generous Sponsors</h1>
 		<div id="wheel">
 			<div id="frame-collection" href="#Sponsors" class="pop">
 				<div class="frame">
-					<div class="sponsor giga"><img src="sponsors/logo_morgan.png" alt="morgan"></div>
+					<div class="sponsor giga"><img src="img/sponsors/logo_morgan.png" alt="morgan"></div>
 				</div>
 			 	<div class="frame">
-					<div class="sponsor giga"><img src="sponsors/logo_vigilant.png" alt="vigilant"></div>
+					<div class="sponsor giga"><img src="img/sponsors/logo_vigilant.png" alt="vigilant"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor mega"><img src="sponsors/logo_google.png" alt="google"></div>
+				 	<div class="sponsor mega"><img src="img/sponsors/logo_google.png" alt="google"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor mega"><img src="sponsors/logo_kronos.png" alt="kronos"></div>
+				 	<div class="sponsor mega"><img src="img/sponsors/logo_kronos.png" alt="kronos"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor mega"><img src="sponsors/logo_giro.png" alt="giro"></div>
+				 	<div class="sponsor mega"><img src="img/sponsors/logo_giro.png" alt="giro"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor kilo"><img src="sponsors/logo_ormuco.png" alt="ormuco"></div>
+				 	<div class="sponsor kilo"><img src="img/sponsors/logo_ormuco.png" alt="ormuco"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor kilo"><img src="sponsors/logo_wolfram.png" alt="wolfram"></div>
+				 	<div class="sponsor kilo"><img src="img/sponsors/logo_wolfram.png" alt="wolfram"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor kilo"><img src="sponsors/logo_namecheap.png" alt="namecheap"></div>
+				 	<div class="sponsor kilo"><img src="img/sponsors/logo_namecheap.png" alt="namecheap"></div>
 				</div>
 				<div class="frame">
-				 	<div class="sponsor kilo"><img src="sponsors/logo_tilt.png" alt="tilt"></div>
+				 	<div class="sponsor kilo"><img src="img/sponsors/logo_tilt.png" alt="tilt"></div>
 				 </div>
 			 </div>
 		</div>
@@ -367,7 +389,7 @@
 			<h2>Sponsor ECSESS Code.Jam()</h2>
 			<p>We are a team of 100 students from a variety of disciplines. Mechanical engineering, electrical engineering, physics, and finance are but three of over 11 disciplines represented on our team. By supporting McGill Robotics, you are helping a team of enthusiastic students build, test, and compete internationally with our robots. In addition, you are aiding the training of future engineers, scientists, and businessmen via the opportunity to engage in hands on experience in their fields.</p>
 			<p>If you are interested in sponsoring McGill Robotics, please have a look at our sponsorship package and be sure to email us at <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a>.</p>
-			<a id="Package" href="sponsors/sponsorship_package.pdf" target="_blank"><img src="sponsors/sponsorship_package_icon.ico" alt="CodeJam 2016 Sponsorship Package"/></a> 
+			<a id="Package" href="sponsors/sponsorship_package.pdf" target="_blank"><img src="img/sponsors/sponsorship_package_icon.ico" alt="CodeJam 2016 Sponsorship Package"/></a> 
 		</div>
 	</section>
 		

@@ -19,6 +19,17 @@
 }
 
 /*-----Popups-----*/
+#popup-layer {
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
 .popup {
 	display: none;	
 	border: none;
@@ -27,7 +38,7 @@
 	top: 0;
 	left: 0;
 	outline: none;
-	z-index: 3;
+	z-index: 5;
 
 	-webkit-overflow-scrolling: touch;
 }
@@ -40,7 +51,7 @@
 
 .popup-body {
 	background: rgba(0, 0, 0, 0.8);
-	max-height: 60vh;
+	max-height: 65vh;
 	overflow: auto;
 	padding: 1em;
 	position: relative;
@@ -150,17 +161,6 @@
 	height: 8em; width: 8em;
 	float: left;
 	margin: 0 1em 0 0;
-}
-
-#popup-layer {
-	background: rgba(0, 0, 0, 0.25);
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
 }
 
 #smaller { display: none; }
