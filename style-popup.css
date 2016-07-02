@@ -1,21 +1,21 @@
 .popup { margin: 10vh 10%; width: 80%; }
 .popup.enlarged { margin: 2.5vh 2.5%; width: 95%; height: 95vh; }
 
-#Sponsors .giga { height: 6em; }
-#Sponsors .mega { height: 4em; }
-#Sponsors .kilo { height: 2em; }
+#Sponsors .giga { height: 6rem; }
+#Sponsors .mega { height: 4rem; }
+#Sponsors .kilo { height: 2rem; }
 
-#blurb-container { width: 90%; padding: 1.5em; }
+#blurb-container { width: 90%; padding: 1.5rem; }
 
 @media (min-width: 70em) {
 	.popup { margin: 10vh 25%; width: 50%; }
 	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
 
-	#Sponsors .giga { height: 8em; }
-	#Sponsors .mega { height: 6em; }
-	#Sponsors .kilo { height: 4em; }
+	#Sponsors .giga { height: 8rem; }
+	#Sponsors .mega { height: 6rem; }
+	#Sponsors .kilo { height: 4rem; }
 
-	#blurb-container { width: 50%; padding: 3em; }
+	#blurb-container { width: 50%; padding: 3rem; }
 }
 
 /*-----Popups-----*/
@@ -46,14 +46,14 @@
 .popup-header {
 	background: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid #ddd;
-	padding: 1em 0 0 1em;
+	padding: 1em 0 0 1rem;
 }
 
 .popup-body {
 	background: rgba(0, 0, 0, 0.8);
 	max-height: 65vh;
 	overflow: auto;
-	padding: 1em;
+	padding: 1rem;
 	position: relative;
 }
 
@@ -61,7 +61,7 @@
 	background: rgba(0, 0, 0, 0.7);
 	border-top: 1px solid #ddd;
 	text-align: right;
-	padding: 1em;
+	padding: 1rem;
 }
 
 #popup-container h2 {
@@ -73,7 +73,7 @@
 #popup-container h3 {
 	color: #fff;
 	font: 300 1.5em 'Lato', sans-serif;
-	margin: .5em;
+	margin: .5rem;
 }
 
 #popup-container h4 {
@@ -90,14 +90,14 @@
 .footer-button {
 	background-color: rgba(0, 0, 0, .3);
 	border: none;
-	border-radius: 1em;
+	border-radius: 1rem;
 	box-shadow: 0 0 1px #fff;
 	color: #ddd;
 	cursor: pointer;
 	font: 300 1em 'Lato', sans-serif;
-	margin: 0 .25em;
+	margin: 0 .25rem;
 	outline: none;
-	padding: .25em .5em;
+	padding: .25em .5rem;
 }
 
 .footer-button:hover {
@@ -110,13 +110,13 @@
 	border-radius: 100%;
 	box-shadow: 0 0 1px #fff;
 	cursor: pointer;
-	height: 2em; width: 2em;
-	margin: 0 .25em;
+	height: 2rem; width: 2rem;
+	margin: 0 .25rem;
 	outline: none;
 	position: absolute;
 }
-.header-button.resizing { top: 1em; right: 5em; }
-.header-button.exit { top: 1em; right: 2em; }
+.header-button.resizing { top: 1rem; right: 5rem; }
+.header-button.exit { top: 1rem; right: 2rem; }
 
 .exit:hover { background-color: rgba(128, 0, 0, .5); }
 .submit:hover { background-color: rgba(0, 128, 0, .5); }
@@ -127,7 +127,7 @@
 #Sponsors .popup-body { text-align: center; }
 #Sponsors .sponsor {
 	display: inline-block;
-	margin: 1em;
+	margin: 1rem;
 }
 
 #Ask .popup-body { color: #fff }
@@ -136,7 +136,7 @@
 	margin: .5em 0;
 }
 #Ask-question {
-    height: 5em;
+    height: 5rem;
     width: 100%;
     text-align: top;
 }
@@ -151,14 +151,14 @@
 	background: rgba(75, 75, 75, .3);
 	display: inline-block;
 	margin: 0 0 1em 0;
-	min-height: 8em; width: auto;
+	min-height: 8rem; width: auto;
 }
 
-.profile p { margin: 1em; text-align: justify;}
+.profile p { margin: 1rem; text-align: justify;}
 
 .profile-pic {
 	display: inline-block;
-	height: 8em; width: 8em;
+	height: 8rem; width: 8rem;
 	float: left;
 	margin: 0 1em 0 0;
 }
@@ -170,10 +170,10 @@
 /*-----Sponsors-----*/
 #sponsorship-container h1 {
 	color: #000;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	text-shadow: 1px 1px #bbb;
 	text-align: center;
-	margin: 1em;
+	margin: 1rem;
 }
 
 #wheel {
@@ -182,14 +182,14 @@
 	box-shadow: inset 0 0 1em #222, 1px 1px 1em #000;
 	border-top: .25em solid maroon;
 	border-bottom: .25em solid maroon;
-	height: 12em;
+	height: 12rem;
 	width: 100%;
 	overflow: hidden;
 }
 
 #frame-collection {
 	cursor: pointer;
-	height: 108em;
+	height: 108rem;
 	width: 100%;
 	margin: 0;
 	overflow: hidden;
@@ -198,7 +198,7 @@
 #frame-collection .frame {
 	/*border: 1px solid green;*/
 	display: block;
-	height: 12em;
+	height: 12rem;
 	width: 100%;
 	text-align: center;
 }
@@ -223,9 +223,9 @@
 			filter: none;
 }
 
-.sponsor.giga { margin: 1em auto; width: auto; height: 10em; }
-.sponsor.mega { margin: 3em auto; width: auto; height: 6em; }
-.sponsor.kilo { margin: 4em auto; width: auto; height: 4em; }
+.sponsor.giga { margin: 1em auto; width: auto; height: 10rem; }
+.sponsor.mega { margin: 3em auto; width: auto; height: 6rem; }
+.sponsor.kilo { margin: 4em auto; width: auto; height: 4rem; }
 
 #blurb-container {
 	background: rgba(255, 255, 255, .5);
@@ -243,12 +243,12 @@
 }
 
 #Package {
-	border-radius: 1em;
+	border-radius: 1rem;
 	box-shadow: 1px 1px 4px #333;
 	display: block;
 	margin: 3em auto 0;
 	height: auto;
-	width: 15em;
+	width: 15rem;
 	overflow: hidden;
 }
 
