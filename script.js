@@ -2,10 +2,12 @@
 $(function() {
 	var $menu = $("#menu");
 	var $icon = $("#icon");
+
 	var $layer = $("#popup-layer");
 
+    // Clicking menu icon
     $icon.on("click", function() {
-        $(".popup").fadeOut();  
+        $(".popup").fadeOut();
     	$layer.fadeToggle();
     	$icon.toggleClass("icon-hover");
     	$menu.slideToggle();
@@ -17,8 +19,9 @@ $(function() {
         $(".popup").fadeOut();
         $icon.removeClass("icon-hover");
         $menu.slideUp();
-    	var popup = $(this).attr("href");	 		
-   		$layer.fadeIn();
+    	$layer.fadeIn();
+
+        var popup = $(this).attr("href");   		
    		$(popup).fadeIn();
     }
 
@@ -31,19 +34,10 @@ $(function() {
 		$icon.removeClass("icon-hover");
 		$layer.fadeOut();
     }
-})
 
-
-
-
-// Annnouncement
-$(function() {
-    var $menu = $("#menu");
-    var $icon = $("#icon");
+    // News panel
     var $news = $("#news-container");    
     var $news_items = $(".news-item");
-    
-    var $layer = $("#popup-layer");    
 
     $(".dismiss").on("click", dismiss_news);
     function dismiss_news() {

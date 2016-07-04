@@ -7,7 +7,7 @@
 
 #blurb-container { width: 90%; padding: 1.5rem; }
 
-@media (min-width: 70em) {
+@media (min-width: 70rem) {
 	.popup { margin: 10vh 25%; width: 50%; }
 	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
 
@@ -46,12 +46,12 @@
 .popup-header {
 	background: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid #ddd;
-	padding: 1em 0 0 1rem;
+	padding: 1rem 0 0 1rem;
 }
 
 .popup-body {
 	background: rgba(0, 0, 0, 0.8);
-	max-height: 65vh;
+	max-height: 60vh;
 	overflow: auto;
 	padding: 1rem;
 	position: relative;
@@ -66,25 +66,25 @@
 
 #popup-container h2 {
 	color: #fff;
-	font: 300 2em 'Lato', sans-serif;
+	font: 300 2rem 'Lato', sans-serif;
 	margin: 0;
 }
 
 #popup-container h3 {
 	color: #fff;
-	font: 300 1.5em 'Lato', sans-serif;
+	font: 300 1.5rem 'Lato', sans-serif;
 	margin: .5rem;
 }
 
 #popup-container h4 {
 	color: #fff;
-	font: 300 1em 'Lato', sans-serif;
+	font: 300 1rem 'Lato', sans-serif;
 	margin: 0;
 }
 
 #popup-container p, #popup-container li {
 	color: #ddd;
-	font: 300 1em 'Lato', sans-serif;
+	font: 300 1rem/1.5 'Lato', sans-serif;
 }
 
 .footer-button {
@@ -94,10 +94,10 @@
 	box-shadow: 0 0 1px #fff;
 	color: #ddd;
 	cursor: pointer;
-	font: 300 1em 'Lato', sans-serif;
+	font: 300 1rem 'Lato', sans-serif;
 	margin: 0 .25rem;
 	outline: none;
-	padding: .25em .5rem;
+	padding: .25rem .5rem;
 }
 
 .footer-button:hover {
@@ -133,7 +133,7 @@
 #Ask .popup-body { color: #fff }
 #Ask input {
 	display: inline-block;
-	margin: .5em 0;
+	margin: .5rem 0;
 }
 #Ask-question {
     height: 5rem;
@@ -150,7 +150,7 @@
 .profile {
 	background: rgba(75, 75, 75, .3);
 	display: inline-block;
-	margin: 0 0 1em 0;
+	margin: 0 0 1rem 0;
 	min-height: 8rem; width: auto;
 }
 
@@ -160,7 +160,7 @@
 	display: inline-block;
 	height: 8rem; width: 8rem;
 	float: left;
-	margin: 0 1em 0 0;
+	margin: 0 1rem 0 0;
 }
 
 #smaller { display: none; }
@@ -169,9 +169,9 @@
 
 /*-----Sponsors-----*/
 #sponsorship-container h1 {
-	color: #000;
+	color: #ddd;
 	font-size: 1.5rem;
-	text-shadow: 1px 1px #bbb;
+	text-shadow: 1px 1px #000;
 	text-align: center;
 	margin: 1rem;
 }
@@ -179,9 +179,9 @@
 #wheel {
 	background: rgba(0, 0, 0, .7);
 	box-sizing: content-box;
-	box-shadow: inset 0 0 1em #222, 1px 1px 1em #000;
-	border-top: .25em solid maroon;
-	border-bottom: .25em solid maroon;
+	box-shadow: inset 0 0 1rem #222, 1px 1px 1rem #000;
+	border-top: .25rem solid maroon;
+	border-bottom: .25rem solid maroon;
 	height: 12rem;
 	width: 100%;
 	overflow: hidden;
@@ -223,22 +223,25 @@
 			filter: none;
 }
 
-.sponsor.giga { margin: 1em auto; width: auto; height: 10rem; }
-.sponsor.mega { margin: 3em auto; width: auto; height: 6rem; }
-.sponsor.kilo { margin: 4em auto; width: auto; height: 4rem; }
+.sponsor.giga { margin: 1rem auto; width: auto; height: 10rem; }
+.sponsor.mega { margin: 3rem auto; width: auto; height: 6rem; }
+.sponsor.kilo { margin: 4rem auto; width: auto; height: 4rem; }
 
 #blurb-container {
-	background: rgba(255, 255, 255, .5);
-	box-shadow: .25em .25em .5em -.2em #000;
-	margin: 3em auto;
+	background: rgba(0, 0, 0, .5);
+	box-shadow: .25rem .25rem .5rem -.2rem #000;
+	color: #fff;
+	margin: 3rem auto;
 }
 
 #blurb-container h2 {
+	color: #ddd;
 	margin: 0;
 	text-align: center;
 }
 
 #blurb-container p {
+	font: 300 1rem/1.5 'Lato', sans-serif;
 	/*text-align: justify;*/
 }
 
@@ -246,7 +249,7 @@
 	border-radius: 1rem;
 	box-shadow: 1px 1px 4px #333;
 	display: block;
-	margin: 3em auto 0;
+	margin: 3rem auto 0;
 	height: auto;
 	width: 15rem;
 	overflow: hidden;
