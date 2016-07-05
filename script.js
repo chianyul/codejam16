@@ -21,12 +21,17 @@ $(function() {
         $menu.slideUp();
     	$layer.fadeIn();
 
-        var popup = $(this).attr("href");   		
+        var popup = $(this).attr("href"); 
    		$(popup).fadeIn();
     }
 
 	$(".exit").on("click", exit);
     $("#popup-layer").on("click", exit);
+    $(document).keyup(function(key) {
+        if(key.keyCode == 27) {
+            exit();
+        }
+    })
 
 	function exit() {
     	$(".popup").fadeOut();		

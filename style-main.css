@@ -101,7 +101,7 @@ body {
 
 #title { 
 	display: block;
-	height: auto; width: 90%; max-width: 40rem;
+	height: auto; width: 90%; max-width: 30rem;
 	margin: 4rem auto .5rem;
 	padding: 0;	
 }
@@ -313,11 +313,12 @@ a.menu-link { display: block; }
 	   -moz-transition: all .3s ease-out;
 			transition: all .3s ease-out;	   
 }
-
 .thumbnail:hover { 
 	border: 1px solid #fff;
 	box-shadow: 3px 3px 2em -.25em #111; 
 }
+
+.thumbnail img, .tile-title { animation: fade 5s 1 0s normal both; }
 
 .medium img {
 	position: absolute;
@@ -391,9 +392,11 @@ a.menu-link { display: block; }
 
 /*-----Footer-----*/
 #footer {
-	margin-top: 8rem;
+	
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
+	font-size: .75rem;
+	margin-top: 8rem;
 	text-align: center;
 	padding: 1rem;
 	width: 100%;
@@ -407,4 +410,11 @@ a.menu-link { display: block; }
 
 .email:hover {
 	color: red;
+}
+
+#awcc1467635939069 {
+	position: absolute;
+	right: 0; top: 0;
+
+	width: 30rem; max-width: 60%;
 }
