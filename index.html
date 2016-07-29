@@ -9,7 +9,7 @@
 
 	<link rel="icon" href = "codejam.ico"/>
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,500|Arvo" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,500|Arvo|Anonymous+Pro:400,700" rel="stylesheet" type="text/css">
 	<link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style-main.css"/>
 	<link rel="stylesheet" href="style-popup.css"/>
@@ -19,16 +19,6 @@
 <body>	
 	<noscript style="text-align:center;">For full functionality of this page it is necessary to enable JavaScript.</noscript>
 	<header>
-		<div id="entrance">
-			<div id="title-container">
-				<img id="title-img0" class="title-img" src="img/header/title-img0.png">
-				<img id="title-img1" class="title-img" src="img/header/title-img1.png">
-				<img id="title-img2" class="title-img" src="img/header/title-img2.png">
-				<img id="title-img3" class="title-img" src="img/header/title-img3.png">
-				<img id="title-img4" class="title-img" src="img/header/title-img4.png">
-			</div>
-		</div>		
-
 		<div><img id="icon" src="img/header/jar.png"/></div>
 		<div><img id="title" src="img/header/title.png"/ alt="Code.Jam()"></div>
 
@@ -36,10 +26,9 @@
 			<ul>
 				<li>Menu</li>
 				<li class="menu-link" id="show-news"><i class="fa fa-newspaper-o fa-lg fa-fw" aria-hidden="true"></i> Announcements</li>
-				<li class="menu-link pop" href="#Ask"><i class="fa fa-question-circle fa-lg fa-fw" aria-hidden="true"></i> Ask a question</li>
-				<li class="menu-link pop" href="#"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
+				<li class="menu-link pop" href="#Ask"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
 				<li class="menu-link pop" href="#Team"><i class="fa fa-users fa-lg fa-fw" aria-hidden="true"></i> Our team</li>
-				<a class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
+				<a  class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
 		</nav>
 
@@ -50,9 +39,9 @@
 		<div id="news">	
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i> Test</h2>
-					<button class="header-button dismiss">
-						<i class="fa fa-trash fa-lg" aria-hidden="true" style="color:#fff;"></i>
+					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
@@ -62,9 +51,9 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i> Feature update</h2>
-					<button class="header-button dismiss">
-						<i class="fa fa-trash fa-lg" aria-hidden="true" style="color:#fff;"></i>
+					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
@@ -74,9 +63,9 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i> Feature update</h2>
-					<button class="header-button dismiss">
-						<i class="fa fa-trash fa-lg" aria-hidden="true" style="color:#fff;"></i>
+					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
@@ -86,9 +75,9 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i> Feature update</h2>
-					<button class="header-button dismiss">
-						<i class="fa fa-trash fa-lg" aria-hidden="true" style="color:#fff;"></i>
+					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
@@ -98,9 +87,9 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i> Feature update</h2>
-					<button class="header-button dismiss">
-						<i class="fa fa-trash fa-lg" aria-hidden="true" style="color:#fff;"></i>
+					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
@@ -121,7 +110,7 @@
 				</div>
 			</div>		
 			<div class="col50">
-				<div id="date" href="#" class="thumbnail medium nopop">
+				<div id="tile_date" class="thumbnail medium nopop">
 					<img src="img/poster.jpg" alt=""/>
 					<div class="tile-title"><div class="table"><h1>Date</h1></div></div>
 				</div><!--
@@ -153,9 +142,35 @@
 
 		<div class="row">
 			<div class="col50">
-				<div class="thumbnail large">
+				<div id="tile_schedule" class="thumbnail large">
 					<img src="img/saki.jpg" alt="">
-					<div class="tile-title"><div class="table"><h1>Schedule</h1></div></div>
+					<!--<div class="tile-title"><div class="table"><h1>Schedule</h1></div></div>-->
+					<div class="tile-title schedule-title-container">
+						<div data-day="fri" class="schedule-title active-day">Friday</div>
+						<div data-day="sat" class="schedule-title">Saturday</div>
+						<div data-day="sun" class="schedule-title">Sunday</div>		
+					</div>
+					<div class="schedule-detail-container">			
+						<div id="schedule-fri" class="schedule-detail active-schedule">
+							<p>12:00	Tech fair 1</p>
+							<p>13:00	Tech fair 2</p>
+							<p>14:30	Networking + sign-in</p>
+							<p>18:00	Opening ceremony</p>
+							<p>19:00	Dinner</p>
+						</div>
+						<div id="schedule-sat" class="schedule-detail">
+							<p>09:00	Breakfast</p>
+							<p>12:00	Lunch</p>
+							<p>15:00	Snack</p>
+							<p>18:00	Dinner</p>
+							<p>23:59	Midnight yoga</p>
+						</div>
+						<div id="schedule-sun" class="schedule-detail">
+							<p>09:00	Breakfast</p>
+							<p>12:00	Lunch</p>
+							<p>19:00	Submission deadline</p>
+						</div>					
+					</div>
 				</div>
 					</div><!--
 			 --><div class="col50">
@@ -172,10 +187,10 @@
 
 		<div class="row">
 			<div class="col25 social">					
-				<div class="thumbnail medium" id="FB"><a target="_blank" href="https://www.facebook.com/mcgillcodejam2014/"><img src=""/></a></div><!--
-			 --><div class="thumbnail medium" id="TW"><a target="_blank" href="https://twitter.com/ecsess/"><img src=""/></a></div><!--
-			 --><div class="thumbnail medium" id="IN"><a target="_blank" href="https://www.instagram.com/mcgill_ecsess/"><img src=""/></a></div><!--
-			 --><div class="thumbnail medium" id="EM"><a target="_blank" href="mailto:ecsess.vpexternal@mcgilleus.ca"><img src=""/></a></div>
+				<div class="thumbnail medium" id="FB"><a target="_blank" href="https://www.facebook.com/mcgillcodejam2014/"><img alt=""/></a></div><!--
+			 --><div class="thumbnail medium" id="TW"><a target="_blank" href="https://twitter.com/ecsess/"><img alt=""/></a></div><!--
+			 --><div class="thumbnail medium" id="IN"><a target="_blank" href="https://www.instagram.com/mcgill_ecsess/"><img alt=""/></a></div><!--
+			 --><div class="thumbnail medium" id="EM"><a target="_blank" href="mailto:ecsess.vpexternal@mcgilleus.ca"><img alt=""/></a></div>
 			</div>				
 			<div class="col25">
 				<div class="thumbnail large"><a href="#">
@@ -266,9 +281,9 @@
 			<button class="header-button exit">
 				<i class="fa fa-times" aria-hidden="true" style="color:#fff;"></i>
 			</button>
-			<!--
+			
 			<iframe src="https://docs.google.com/forms/d/1w7KlP-YzDP-fk4gv9b7gDIQS7fgLIvP9Jvt3PtUkl0I/viewform?embedded=true" width="100%" height="100%"></iframe>
-			-->
+			
 		</div>
 
 		<div id="Pay" class="popup fade" tabindex="-1">
@@ -276,8 +291,8 @@
 				<h2>Payment</h2>
 			</div>
 			<div class="popup-body">
-				<p>You can pay for your ticket in cash at the ECSESS Lounge or you can pay online by Tilt</p>
-				<a href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="img/sponsors/logo_tilt.png" style="width:5em;"/></a>
+				<p>You can pay for your ticket in cash at the ECSESS Lounge or you can pay online by <a href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="img/sponsors/logo_tilt.png" id="tilt_link"/></a></p>
+				
 			</div>
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
@@ -444,10 +459,10 @@
 		
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>	
 	<script src="script.js"></script>	
-	<!--
+	
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="googleMap.js"></script>
-	-->
+	
 	<script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=12594078"></script>
 	</body>
 </html>	

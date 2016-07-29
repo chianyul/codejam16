@@ -1,8 +1,7 @@
-// Menu and Popups
-$(function() {
+/*--------- Menu, Popups and News ----------*/
+$(document).ready(function() {
 	var $menu = $("#menu");
 	var $icon = $("#icon");
-
 	var $layer = $("#popup-layer");
 
     // Clicking menu icon
@@ -13,6 +12,7 @@ $(function() {
     	$menu.slideToggle();
     })    
 
+    // Click a pop-able tile
 	$(".pop").on("click", pop_out);
 
     function pop_out() {
@@ -27,12 +27,15 @@ $(function() {
 
 	$(".exit").on("click", exit);
     $("#popup-layer").on("click", exit);
+
+    // Pressing ESC key
     $(document).keyup(function(key) {
         if(key.keyCode == 27) {
             exit();
         }
     })
 
+    // Function to fade menu, popup-layer and all popups
 	function exit() {
     	$(".popup").fadeOut();		
 		$menu.slideUp();
@@ -40,7 +43,7 @@ $(function() {
 		$layer.fadeOut();
     }
 
-    // News panel
+    /*--------- News ----------*/
     var $news = $("#news-container");    
     var $news_items = $(".news-item");
 
@@ -72,16 +75,15 @@ $(function() {
 
 
 
-
-// Date tile
-$(function() {
+/*--------- Date tile ----------*/
+$(document).ready(function() {
     var today = new Date();
     var codejamDate = new Date();
         codejamDate.setFullYear(2016,10,20); // Nov 20, 2016
     var daysLeft = Math.floor((codejamDate - today) / (1000*60*60*24));
 
-    var $date_tile = $("#date");
-    var $content = $date_tile.find(".table");
+    var $tile_date = $("#tile_date");
+    var $content = $tile_date.find(".table");
     var dateArray = new Array(
         "<h1>Nov <span style=\"font-weight:300;\">20</span></h1>", 
         "<h1 style=\"line-height:50%;\"><span style=\"font-weight:300;;\">"+daysLeft+"</span><span style=\"font-size:50%;\"> days till CodeJam</span></h1>", 
@@ -96,9 +98,24 @@ $(function() {
 })
 
 
+/*--------- Schedule tile ----------*/
+$(document).ready(function() {
+    var $tile_schedule = $("#tile_schedule");
+    var $day = $tile_schedule.find(".schedule-title");
+    var $content = $tile_schedule.find(".schedule-detail");
 
-// Popup "enlarge" button
-$(function() {
+    $day.on("click", function() {
+        var day_id = $(this).attr("data-day");
+        $day.removeClass("active-day");
+        $(this).addClass("active-day");
+        $content.removeClass("active-schedule");
+        $("#schedule-"+day_id).addClass("active-schedule");
+    })
+})
+
+
+/*--------- Popup "enlarge" button ----------*/
+$(document).ready(function() {
 	var $enlarge = $("#enlarge");
     var $smaller = $("#smaller");
     $enlarge.on("click", function() {
@@ -115,8 +132,8 @@ $(function() {
 
 
 
-// Sponsor wheel	
-$(function() {
+/*--------- Sponsorship banner ----------*/	
+$(document).ready(function() {
 	var curr = 0;
 
 	var $wheel = $("#wheel");
@@ -138,7 +155,7 @@ $(function() {
 
 // Entrance animation
 /*
-$(function() {
+$(document).ready(function() {
     $("#entrance").delay(4500).animate({"height":"0"}, 1000);
     $("#title-img1").delay(4500).animate({"height":"0", "top":"0", "left":"0"}, 1500);
     

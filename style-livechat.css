@@ -1,9 +1,10 @@
 /* My Live Chat */
 
 .mylivechat_inline {
-	min-width: 21rem !important;
+	/*min-width: 21rem !important;*/
 	width: 90% !important;
 	left: 5% !important;
+	z-index: 3 !important;
 }
 
 @media (min-width: 35rem) {
