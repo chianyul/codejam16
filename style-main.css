@@ -2,21 +2,21 @@
 	   -moz-box-sizing: border-box;	
 			box-sizing: border-box; }
 
-html { 
-	background: rgb(50, 45, 40) url("img/background/bg5.jpg") no-repeat fixed center; 
-	/*background: #ddd url("img/background/blue.png");*/
-	overflow-x: hidden; 
+html {
+	background: rgb(50, 45, 40) url("img/background/bg5.jpg") no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 body {
 	font-family: 'Arvo', serif;
 	margin: 0;
+	overflow-x: hidden; 
 	padding: 0;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-
-/*-----Navigation-----*/
 #title { 
 	display: block;
 	height: auto; width: 90%; max-width: 30rem;
@@ -24,6 +24,9 @@ body {
 	padding: 0;	
 }
 
+
+
+/*-----Navigation-----*/
 #icon {
 	cursor: pointer;
 	height: 25vw; width: 25vw;
@@ -32,9 +35,29 @@ body {
 	position: fixed;
 	transition: .5s;
 	z-index: 5;	
-}
-#icon.icon-hover { left: -1rem; top: -.5rem; }
 
+	animation: iconify 10s infinite normal;
+}
+
+#icon.icon-hover { 
+	animation-iteration-count: 1;
+	left: -1rem; top: -.5rem; 
+}
+
+#icon:hover { 
+	animation-iteration-count: 1; 
+}
+
+@keyframes iconify {
+	 2% 	{ -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+	 6%		{ -webkit-transform: scale3d(1.25, 0.75, 1); transform: scale3d(1.25, 0.75, 1); }
+	10% 	{ -webkit-transform: scale3d(0.75, 1.25, 1); transform: scale3d(0.75, 1.25, 1); }
+	12% 	{ -webkit-transform: scale3d(1.15, 0.85, 1); transform: scale3d(1.15, 0.85, 1); }
+	14% 	{ -webkit-transform: scale3d(.95, 1.05, 1); transform: scale3d(.95, 1.05, 1); }
+	16% 	{ -webkit-transform: scale3d(1.05, .95, 1); transform: scale3d(1.05, .95, 1); }
+	20%		{ -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+}
+	
 #menu {	
 	display: none;
 	left: 5%; top: 5%;
@@ -51,18 +74,6 @@ body {
 	padding: 0;
 }
 
-.menu-link {
-	background-color: rgba(255, 255, 255, .75);
-	border-bottom: 1px solid #555;
-	border-top: 1px solid #999;
-	color: #000;
-	font-size: 1rem;
-	padding: 1rem;
-	text-decoration: none;
-}
-
-a.menu-link { display: block; }
-
 #menu li:first-child {
 	background-color: rgba(192, 0, 0, .75);
     border-top: none;
@@ -75,10 +86,22 @@ a.menu-link { display: block; }
 	border-bottom: none;
 }
 
+.menu-link {
+	background-color: rgba(255, 255, 255, .75);
+	border-bottom: 1px solid #555;
+	border-top: 1px solid #999;
+	color: #000;
+	font-size: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+}
+
 .menu-link:hover {
 	cursor: pointer;
 	background-color: rgba(255, 255, 255, .9);
 }
+
+a.menu-link { display: block; }
 
 
 
@@ -108,19 +131,6 @@ a.menu-link { display: block; }
 	text-decoration: none;
 }
 
-#clear-news {
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	height: 7.5vh; max-height: 3rem;
-	font-variant: small-caps;
-}
-
-#archive-link {	
-	display: block;
-	height: 7.5vh; max-height: 3rem;	
-}
-
 #news {
 	max-height: 85vh;
 	overflow: auto;
@@ -134,6 +144,7 @@ a.menu-link { display: block; }
 	height: 1.5rem !important; width: 1.5rem !important;
 	right: .25rem; top: .25rem;
 }
+
 .dismiss-news:hover { background-color: rgba(128, 0, 0, .5); }
 
 .news-header {
@@ -157,7 +168,20 @@ a.menu-link { display: block; }
 
 .news-body p {
 	margin: .5rem 0;
-	font-size: .8rem;
+	font-size: 1rem;
+}
+
+#clear-news {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 7.5vh; max-height: 3rem;
+	font-variant: small-caps;
+}
+
+#archive-link {	
+	display: block;
+	height: 7.5vh; max-height: 3rem;	
 }
 
 
@@ -269,23 +293,24 @@ a.menu-link { display: block; }
 .schedule-title-container {
 	float: right;
 	position: absolute;
-	right: 0; top: 0;
+	right: .5rem; top: .5rem;
 	text-align: right;
 }
 
 .schedule-detail-container {
-	margin: 3rem 2rem;
+	margin: 4rem 0 0 1rem;
 	position: absolute;
 }
 
 .schedule-title {
 	color: #aaa;
+	display: block;
 	font: 300 1.5rem 'Lato';
 	transition: .2s;
 }
 .schedule-title:hover {
 	color: #fff;
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 
 .schedule-detail {
@@ -297,7 +322,7 @@ a.menu-link { display: block; }
 
 .active-day {
 	color: #fff;
-	font: 300 2rem 'Lato', sans-serif;
+	font: 300 2.5rem 'Lato', sans-serif;
 }
 
 .active-schedule {
@@ -343,9 +368,9 @@ a.menu-link { display: block; }
 
 	.tile-title h1 { font: 100 10vw 'Lato', sans-serif; }
 
-	.schedule-title { font-size: 1.5rem; }
-	.schedule-title:hover { font-size: 2.5rem; }
-	.active-day { font-size: 2.5rem; }
+	.schedule-title { font-size: 3vw; }
+	.schedule-title:hover { font-size: 6vw; }
+	.active-day { font-size: 6vw; }
 
 	.schedule-detail { 
 		font-size: 1.2rem;
@@ -373,6 +398,10 @@ a.menu-link { display: block; }
 	#gallery { margin: 0.5%; }
 
 	.tile-title h1 { font: 100 4.5vw 'Lato', sans-serif; }
+
+	.schedule-title { font-size: 1.5vw; }
+	.schedule-title:hover { font-size: 3vw; }
+	.active-day { font-size: 3vw; }
 }
 
 

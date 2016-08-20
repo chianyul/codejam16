@@ -7,17 +7,6 @@
 
 #blurb-container { width: 90%; padding: 1.5rem; }
 
-@media (min-width: 70rem) {
-	.popup { margin: 10vh 25%; width: 50%; }
-	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
-
-	#Sponsors .giga { height: 8rem; }
-	#Sponsors .mega { height: 6rem; }
-	#Sponsors .kilo { height: 4rem; }
-
-	#blurb-container { width: 50%; padding: 3rem; }
-}
-
 /*-----Popups-----*/
 #popup-layer {
 	background: rgba(0, 0, 0, 0.5);
@@ -130,21 +119,37 @@
 	margin: 1rem;
 }
 
-#Ask .popup-body { color: #fff }
-#Ask input {
+
+#Feedback .popup-body { color: #fff }
+#Feedback input[type="text"] {
 	display: inline-block;
-	margin: .5rem 0;
+	font-size: 1.2rem;
+	margin: 0 1rem;
 }
-#Ask-question {
+#Feedback input[type="text"]:focus {
+	outline: none;
+	box-shadow: 0 0 1rem red;
+}
+#Feedback textarea {
+	font-size: 1.2rem;
+}
+#Feedback textarea:focus {
+	box-shadow: 0 0 1rem red;
+}
+#Feedback-message {
     height: 5rem;
     width: 100%;
     text-align: top;
 }
 
+
 #Team ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+#Team p {
+	font-size: 1rem;
 }
 
 .profile {
@@ -269,4 +274,15 @@
 #Package img {
 	/*height: 100%;*/
 	width: 100%;
+}
+
+@media (min-width: 70rem) {
+	.popup { margin: 10vh 25%; width: 50%; }
+	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
+
+	#Sponsors .giga { height: 8rem; }
+	#Sponsors .mega { height: 6rem; }
+	#Sponsors .kilo { height: 4rem; }
+
+	#blurb-container { width: 50%; padding: 3rem; }
 }

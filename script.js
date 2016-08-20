@@ -79,13 +79,13 @@ $(document).ready(function() {
 $(document).ready(function() {
     var today = new Date();
     var codejamDate = new Date();
-        codejamDate.setFullYear(2016,10,20); // Nov 20, 2016
+        codejamDate.setFullYear(2016,10,18); // Nov 20, 2016
     var daysLeft = Math.floor((codejamDate - today) / (1000*60*60*24));
 
     var $tile_date = $("#tile_date");
     var $content = $tile_date.find(".table");
     var dateArray = new Array(
-        "<h1>Nov <span style=\"font-weight:300;\">20</span></h1>", 
+        "<h1>Nov <span style=\"font-weight:300;\">18</span></h1>", 
         "<h1 style=\"line-height:50%;\"><span style=\"font-weight:300;;\">"+daysLeft+"</span><span style=\"font-size:50%;\"> days till CodeJam</span></h1>", 
         "<h1>Date</h1>");
     

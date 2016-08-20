@@ -26,8 +26,9 @@
 			<ul>
 				<li>Menu</li>
 				<li class="menu-link" id="show-news"><i class="fa fa-newspaper-o fa-lg fa-fw" aria-hidden="true"></i> Announcements</li>
-				<li class="menu-link pop" href="#Ask"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
+				<li class="menu-link pop" href="#Feedback"><i class="fa fa-commenting fa-lg fa-fw" aria-hidden="true"></i> Feedback</li>
 				<li class="menu-link pop" href="#Team"><i class="fa fa-users fa-lg fa-fw" aria-hidden="true"></i> Our team</li>
+				<li class="menu-link"> DRAKE it up</li>
 				<a  class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
 		</nav>
@@ -39,7 +40,7 @@
 		<div id="news">	
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Test</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
@@ -51,7 +52,7 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
@@ -63,7 +64,7 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
@@ -75,7 +76,7 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
@@ -87,7 +88,7 @@
 
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feature update</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
@@ -144,12 +145,7 @@
 			<div class="col50">
 				<div id="tile_schedule" class="thumbnail large">
 					<img src="img/saki.jpg" alt="">
-					<!--<div class="tile-title"><div class="table"><h1>Schedule</h1></div></div>-->
-					<div class="tile-title schedule-title-container">
-						<div data-day="fri" class="schedule-title active-day">Friday</div>
-						<div data-day="sat" class="schedule-title">Saturday</div>
-						<div data-day="sun" class="schedule-title">Sunday</div>		
-					</div>
+					<div class="tile-title"></div>
 					<div class="schedule-detail-container">			
 						<div id="schedule-fri" class="schedule-detail active-schedule">
 							<p>12:00	Tech fair 1</p>
@@ -170,6 +166,11 @@
 							<p>12:00	Lunch</p>
 							<p>19:00	Submission deadline</p>
 						</div>					
+					</div>
+					<div class="schedule-title-container">
+						<div data-day="fri" class="schedule-title active-day">Friday</div>
+						<div data-day="sat" class="schedule-title">Saturday</div>
+						<div data-day="sun" class="schedule-title">Sunday</div>		
 					</div>
 				</div>
 					</div><!--
@@ -193,9 +194,9 @@
 			 --><div class="thumbnail medium" id="EM"><a target="_blank" href="mailto:ecsess.vpexternal@mcgilleus.ca"><img alt=""/></a></div>
 			</div>				
 			<div class="col25">
-				<div class="thumbnail large"><a href="#">
-					<img src="img/message.jpg" alt=""></a>
-					<div class="tile-title"><div class="table"><h1>Live</h1></div></div>
+				<div href="#News" class="thumbnail large">
+					<img src="img/ecsess_sqr.png" alt=""></a>
+					<div class="tile-title"><div class="table"><h1>ECSESS</h1></div></div>
 				</div>
 			</div>
 		</div>	
@@ -210,7 +211,8 @@
 	</section>
 	
 	<section id="popup-container">
-		<div id="About" class="popup fade" tabindex="-1">
+		<div id="popup-layer"></div>
+		<div id="About" class="popup" tabindex="-1">
 			<div class="popup-header">
 				<h2>About</h2>
 			</div>
@@ -223,7 +225,7 @@
 			</div>
 		</div>
 
-		<div id="FAQs" class="popup fade" tabindex="-1">
+		<div id="FAQs" class="popup" tabindex="-1">
 			<div class="popup-header">
 				<h2>FAQs</h2>
 			</div>
@@ -240,7 +242,7 @@
 			</div>
 		</div>
 
-		<div id="Event1" class="popup fade" tabindex="-1">
+		<div id="Event1" class="popup" tabindex="-1">
 			<div class="popup-header">
 				<h2>Tech Talks</h2>
 			</div>
@@ -254,7 +256,7 @@
 			</div>
 		</div>
 
-		<div id="Event2" class="popup fade" tabindex="-1">
+		<div id="Event2" class="popup" tabindex="-1">
 			<div class="popup-header">
 				<h2>Tech Fair</h2>
 			</div>
@@ -269,9 +271,9 @@
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
 			</div>
-		</div>		
+		</div>
 
-		<div id="Form" class="popup fade" tabindex="-1">			
+		<div id="Form" class="popup" tabindex="-1">			
 			<button class="header-button resizing" id="enlarge">
 				<i class="fa fa-expand" aria-hidden="true" style="color:#fff;"></i>
 			</button>
@@ -286,7 +288,7 @@
 			
 		</div>
 
-		<div id="Pay" class="popup fade" tabindex="-1">
+		<div id="Pay" class="popup" tabindex="-1">
 			<div class="popup-header">
 				<h2>Payment</h2>
 			</div>
@@ -331,24 +333,25 @@
 			</div>
 		</div>
 
-		<div id="Ask" class="popup" tabindex="-1">
+		<div id="Feedback" class="popup" tabindex="-1">			
 			<div class="popup-header">
 				<h2>Ask a Question</h2>
 			</div>
-			<div class="popup-body">
-				<p>If you have any questions not answered in the FAQ section, please ask us here. We will answer you as soon as possible!</p>
-				<form>				
-					<h3>Email: <input type="text" name="email" id="Ask-email"/></h3>
-					<textarea type="text" name="question" id="Ask-question" placeholder="Your message..."/></textarea>
-				</form>
-			</div>
-			<div class="popup-footer">
-				<button class="footer-button submit">Submit</button>
-				<button class="footer-button exit">Close</button>				
-			</div>
+			<form action="email.php" method="POST">
+				<div class="popup-body">
+					<p>If you have any questions not answered in the FAQ section, please ask us here. We will answer you as soon as possible!</p>							
+					<p>Name: <input type="text" name="Feedback-name" id="Feedback-name"/></p>
+					<p>Email: <input type="text" name="Feedback-email" id="Feedback-email"/></p>					
+					<textarea type="text" name="Feedback-message" id="Feedback-message" placeholder="Your message..."/></textarea>					
+				</div>
+				<div class="popup-footer">
+					<input class="footer-button submit" type="submit" value="Send">Send</input>
+					<button class="footer-button exit">Close</button>				
+				</div>
+			</form>
 		</div>
 
-		<div id="Team" class="popup" tabinde="-1">
+		<div id="Team" class="popup" tabindex="-1">
 			<div class="popup-header">
 				<h2>The CodeJam Committee</h2>
 			</div>
@@ -356,39 +359,22 @@
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Alina.jpg"/>
 					<h3><span style="font-weight:bold">Chair</span> Alina</h3>
-					<p>Here are some placeholder description about Alina.
-					Here are some more placeholder description about Alina.
-					Here are some even more placeholder description about Alina.</p>
+					<p>Here are some placeholder description about Alina. Here are some more placeholder description about Alina. Here are some even more placeholder description about Alina.</p>
 				</div>
 				<div class="profile">
 					<img class="profile-pic" src="codejam.ico"/>
 					<h3><span style="font-weight:bold">President</span> Tony</h3>
-					<p>Here are some placeholder description about Tony.
-					Here are some more placeholder description about Tony.
-					Here are some even more placeholder description about Tony.</p>
+					<p>Here are some placeholder description about Tony. Here are some more placeholder description about Tony. Here are some even more placeholder description about Tony.</p>
 				</div>
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Drake.jpg"/>
 					<h3><span style="font-weight:bold">Sponsorship</span> Drake</h3>
-					<p>You used to call me on my cell phone,
-					Late night when you need my love.
-					Call me on my cell phone,
-					Late night when you need my love.
-					I know when that hotline bling,
-					That can only mean one thing.
-					I know when that hotline bling,
-					That can only mean one thing.
-					</p>
+					<p>You used to call me on my cell phone, Late night when you need my love. Call me on my cell phone, Late night when you need my love. I know when that hotline bling, That can only mean one thing. I know when that hotline bling, That can only mean one thing.</p>
 				</div>
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/RiRi.jpg"/>
 					<h3><span style="font-weight:bold">Logistics</span> RiRi</h3>
-					<p>Work, work, work, work, work, work. 
-					He said me haffi, work, work, work, work, work, work. 
-					He see me do mi, dirt, dirt, dirt, dirt, dirt, dirt.
-					So me put in work, work, work, work, work, work.
-					When you ah guh learn, learn, learn, learn, learn.
-					Meh nuh care if him hurt, hurt, hurt, hurt, hurting.</p>
+					<p>Work, work, work, work, work, work. He said me haffi, work, work, work, work, work, work. He see me do mi, dirt, dirt, dirt, dirt, dirt, dirt.So me put in work, work, work, work, work, work.When you ah guh learn, learn, learn, learn, learn.Meh nuh care if him hurt, hurt, hurt, hurt, hurting.</p>
 				</div>
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Khaled.jpg"/>
@@ -402,9 +388,7 @@
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
 			</div>
-		</div>
-
-		<div id="popup-layer"></div>
+		</div>		
 	</section>
 
 	<section id="sponsorship-container">
