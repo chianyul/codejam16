@@ -37,4 +37,7 @@ function initialize_map() {
 		},5000);
 	});
 }
-google.maps.event.addDomListener(window, 'load', initialize_map);
+$(document).ready(function() {
+	initialize_map();
+	google.maps.event.addDomListener(window, 'load', initialize_map);
+});

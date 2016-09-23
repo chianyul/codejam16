@@ -79,7 +79,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     var today = new Date();
     var codejamDate = new Date();
-        codejamDate.setFullYear(2016,10,18); // Nov 20, 2016
+        codejamDate.setFullYear(2016,10,18); // Nov 18, 2016
     var daysLeft = Math.floor((codejamDate - today) / (1000*60*60*24));
 
     var $tile_date = $("#tile_date");
