@@ -47,7 +47,7 @@ $(document).ready(function() {
     var $news = $("#news-container");    
     var $news_items = $(".news-item");
 
-    $(".dismiss").on("click", dismiss_news);
+    $(".dismiss-news").on("click", dismiss_news);
     function dismiss_news() {
         var $this_news = $(this).parent().parent();
 
