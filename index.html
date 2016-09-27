@@ -39,20 +39,66 @@
 	<section id="news-container">
 		<div id="clear-news"><div class="table"><p>Clear All></p></div></div>
 		<div id="news">	
-			<?php $newsContent = array('Test News', 'Test News', 'Test News', 'Test News', 'Test News'); 
-			foreach($newsContent as $index => $news): ?>
 			<div class="news-item">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Test<?= '['.$index.']'; ?></h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Test</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
-					<p><?= $news; ?></p>
+					<p>Test News</p>
 				</div>
 			</div>
-			<?php endforeach; ?>
+
+			<div class="news-item">
+				<div class="news-header">
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
+					</button>
+				</div>			
+				<div class="news-body">
+					<p>Rotating date tile</p>
+				</div>
+			</div>
+
+			<div class="news-item">
+				<div class="news-header">
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
+					</button>
+				</div>			
+				<div class="news-body">
+					<p>Added "Our team" menu item.</p>
+				</div>
+			</div>
+
+			<div class="news-item">
+				<div class="news-header">
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
+					</button>
+				</div>			
+				<div class="news-body">
+					<p>Still need to fix entrance animation</p>
+				</div>
+			</div>
+
+			<div class="news-item">
+				<div class="news-header">
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature update</h2>
+					<button class="header-button dismiss-news">
+						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
+					</button>
+				</div>			
+				<div class="news-body">
+					<p>Placeholder</p>
+				</div>
+			</div>
+		</div>
 		
 		<div id="archive-link"><div class="table"><a href="#">News Archives ></a></p></div></div>
 	</section>
