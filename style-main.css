@@ -19,8 +19,8 @@ body {
 
 #title { 
 	display: block;
-	height: auto; width: 90%; max-width: 30rem;
-	margin: 4rem auto .5rem;
+	height: auto; width: 90%; max-width: 35rem;
+	margin: 4rem auto -4rem;
 	padding: 0;	
 }
 
