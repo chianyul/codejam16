@@ -156,7 +156,7 @@
 	background: rgba(75, 75, 75, .3);
 	display: inline-block;
 	margin: 0 0 1rem 0;
-	min-height: 8rem; width: auto;
+	min-height: 8rem; width: 100%;
 }
 
 .profile p { margin: 1rem; text-align: justify;}

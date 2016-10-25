@@ -71,6 +71,10 @@ $(document).ready(function() {
     $("#clear-news").on("click", function() {
         $news.slideUp();
     })
+	
+	$(".tile-layer").on("click", function() {
+		$(".tile-layer").fadeOut();
+	});
 })
 
 
