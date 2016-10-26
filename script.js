@@ -70,11 +70,12 @@ $(document).ready(function() {
 
     $("#clear-news").on("click", function() {
         $news.slideUp();
-    })
+    });
 	
 	$(".tile-layer").on("click", function() {
-		$(".tile-layer").fadeOut();
-	});
+		$(".tile-layer").slideUp();
+	})
+	
 })
 
 
@@ -138,19 +139,20 @@ $(document).ready(function() {
 
 /*--------- Sponsorship banner ----------*/	
 $(document).ready(function() {
-	var curr = 0;
+	var curr = 1;
 
 	var $wheel = $("#wheel");
 	var $container = $wheel.find("#frame-collection");
-	var $sponsor = $container.find(".sponsor");	
+	var $sponsor = $container.find(".frame");	
 	
 	setInterval(function() {
-		var width = "12em";
-		$container.animate({"margin-top": "-="+width}, 1000, function() {
+		var height = "12em";
+		$container.animate({"margin-top": "-="+height}, 1000, function() {
 			curr++;
-			if (curr === $sponsor.length) {
+			if (curr === $sponsor.length+1) {
 				curr = 0;
-				$container.css("margin-top", "0");
+				// $container.css("margin-top", "0");
+                $container.animate({"margin-top": "12rem"}, 1000);
 			}
 		});
 	}, 2000);

@@ -238,10 +238,10 @@ a.menu-link { display: block; }
 }
 
 .thumbnail img, .tile-title { 
-	animation: fade 5s 1 0s normal both; 
 	-webkit-border-radius: 0.5rem;
 	   -moz-border-radius: 0.5rem;
-			border-radius: 0.5rem;}
+			border-radius: 0.5rem;
+}
 
 .medium img {
 	position: absolute;
@@ -407,7 +407,7 @@ a.menu-link { display: block; }
 
 
 /*--------- Scrollbar ----------*/
-./* For Chrome only */
+/* For Chrome only */
 ::-webkit-scrollbar {
     width: .5rem;
 }

@@ -1,9 +1,10 @@
 .popup { margin: 10vh 10%; width: 80%; }
 .popup.enlarged { margin: 2.5vh 2.5%; width: 95%; height: 95vh; }
 
-#Sponsors .giga { height: 6rem; }
-#Sponsors .mega { height: 4rem; }
-#Sponsors .kilo { height: 2rem; }
+#Sponsorspop .tera { max-height: 20%; width: 90%; }
+#Sponsorspop .giga { max-height: 20%; width: 75%; }
+#Sponsorspop .mega { max-height: 20%; width: 45%; }
+#Sponsorspop .kilo { max-height: 20%; width: 30%; }
 
 #blurb-container { width: 90%; padding: 1.5rem; }
 
@@ -113,8 +114,8 @@
 
 #Form:not(.enlarged) { height: 80vh; }
 
-#Sponsors .popup-body { text-align: center; }
-#Sponsors .sponsor {
+#Sponsorspop .popup-body { text-align: center; }
+#Sponsorspop .sponsor {
 	display: inline-block;
 	margin: 1rem;
 }
@@ -175,7 +176,8 @@
 	vertical-align:-4px; 
 }
 #tilt_link:hover {
-	filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+			filter: brightness(0) invert(1);
 }
 
 
@@ -189,7 +191,7 @@
 }
 
 #wheel {
-	background: rgba(0, 0, 0, .7);
+	background: rgba(128, 128, 128, .7);
 	box-sizing: content-box;
 	box-shadow: inset 0 0 1rem #222, 1px 1px 1rem #000;
 	border-top: .25rem solid maroon;
@@ -225,9 +227,9 @@
 .sponsor img { 
 	height: 100%;
 	max-width: 100%;
-
-	-webkit-filter: brightness(0) invert(1); 
+	-webkit-filter: brightness(0) invert(1);
 			filter: brightness(0) invert(1);
+	transition: 1s;
 }
 
 .sponsor img:hover {
@@ -235,9 +237,10 @@
 			filter: none;
 }
 
-.sponsor.giga { margin: 1rem auto; width: auto; height: 10rem; }
-.sponsor.mega { margin: 3rem auto; width: auto; height: 6rem; }
-.sponsor.kilo { margin: 4rem auto; width: auto; height: 4rem; }
+.sponsor.tera { margin: 1rem auto; height: 10rem; }
+.sponsor.giga { margin: 2rem auto; height: 8rem; }
+.sponsor.mega { margin: 3rem auto; height: 6rem; }
+.sponsor.kilo { margin: 3rem 2rem; height: 6rem; }
 
 #blurb-container {
 	background: rgba(0, 0, 0, .5);
@@ -279,10 +282,22 @@
 @media (min-width: 70rem) {
 	.popup { margin: 10vh 25%; width: 50%; }
 	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
-
-	#Sponsors .giga { height: 8rem; }
-	#Sponsors .mega { height: 6rem; }
-	#Sponsors .kilo { height: 4rem; }
+	
+	/*.sponsor.tera { max-width: 50%; }*/
+	/*.sponsor.giga { max-width: 40%; }*/
+	/*.sponsor.mega { max-width: 30%; }*/
+	/*.sponsor.kilo { max-width: 20%; }*/
+	
+	#frame-collection .frame {
+		height: 12rem;
+		width: 60%;
+		margin: 0 auto;
+	}
+	
+	#Sponsorspop .tera { max-width: 50% }
+	#Sponsorspop .giga { max-width: 50% }
+	#Sponsorspop .mega { max-width: 30% }
+	#Sponsorspop .kilo { max-width: 20% }
 
 	#blurb-container { width: 50%; padding: 3rem; }
 }
