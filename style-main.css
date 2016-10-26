@@ -203,17 +203,10 @@ a.menu-link { display: block; }
 .col100 .wide 	{ width: 99%; padding-bottom: 48%; }
 
 .social { float: left; }
-.social img { opacity: 0; width: 100%; height:100%;}
-.social .thumbnail {
-	background: rgba(255, 255, 255, 0.3) url('./img/social_sprite.png');
-	background-repeat: no-repeat;
-	background-size: 400%;
+.social img { 
+	transform: scale(1.05, 1.05);
+	overflow: hidden;
 }
-
-#FB { background-position: 33.3% 14.2%; } 
-#TW { background-position: 33.3% 28.5%; }
-#IN { background-position: 33.3% 57.4%; margin-top: 2%; }
-#EM { background-position: 0 100%; margin-top: 2%; }
 
 #gallery { margin: 1% 0.5%; }
 

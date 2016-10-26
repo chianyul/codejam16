@@ -21,7 +21,10 @@ $(document).ready(function() {
         $menu.slideUp();
     	$layer.fadeIn();
 
-        var popup = $(this).attr("href"); 
+        var popup = $(this).attr("href");
+        if($(window).width() < 720) {
+            $(".popup").addClass("enlarged");
+        }
    		$(popup).fadeIn();
     }
 
@@ -155,7 +158,7 @@ $(document).ready(function() {
                 $container.animate({"margin-top": "12rem"}, 1000);
 			}
 		});
-	}, 2000);
+	}, 3000);
 })
 
 
