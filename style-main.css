@@ -291,7 +291,7 @@ a.menu-link { display: block; }
 }
 
 .schedule-detail-container {
-	margin: 4rem 0 0 1rem;
+	margin: 4rem 0 0 .5rem;
 	position: absolute;
 }
 
@@ -299,7 +299,7 @@ a.menu-link { display: block; }
 	color: #aaa;
 	display: block;
 	font: 300 1.5rem 'Lato';
-	transition: .2s;
+	transition: .25s;
 }
 .schedule-title:hover {
 	color: #fff;
@@ -309,7 +309,7 @@ a.menu-link { display: block; }
 .schedule-detail {
 	color: #fff;
 	display: none;
-	font: 400 1rem 'Anonymous Pro';
+	font: 300 1rem 'Anonymous Pro';
 	text-align: left;
 }
 
@@ -366,8 +366,8 @@ a.menu-link { display: block; }
 	.active-day { font-size: 6vw; }
 
 	.schedule-detail { 
-		font-size: 1.2rem;
-		margin: 3rem; 
+		font-size: 1rem;
+		margin: 2rem; 
 	}
 }
 
@@ -393,7 +393,7 @@ a.menu-link { display: block; }
 	.tile-title h1 { font: 100 4.5vw 'Lato', sans-serif; }
 
 	.schedule-title { font-size: 1.5vw; }
-	.schedule-title:hover { font-size: 3vw; }
+	.schedule-title:hover { font-size: 3vw; }	
 	.active-day { font-size: 3vw; }
 }
 

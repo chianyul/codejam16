@@ -46,9 +46,9 @@
 					</button>
 				</div>			
 				<div class="news-body">
-					<p>+ Added team photos and blurbs</p>
-					<p>+ Updated sponsors</p>
-					<p>+ Google maps bug fixed</p>					
+					<p>+ Fixed sponsorship popup bug</p>
+					<p>+ Fixed sponsor logo size bug</p>
+					<p>+ Fixed social icon on Firefox</p>					
 				</div>
 			</div>
 			<div class="news-item active-news">
@@ -59,9 +59,11 @@
 					</button>
 				</div>			
 				<div class="news-body">
-					<p>+ Sponsorship popup</p>
-					<p>+ Social icons do not show in Firefox</p>
-					<p>+ No photos in "Gallery"</p>				
+					<p>+ Schedule does not show completely on some machines/browsers (i.e. Alina's Chrome)</p>
+					<p>+ Need to add link to 4th social tile, JAMS tile</p>
+					<p>+ Need to add a popup for schedule</p>
+					<p>+ No photos in "Gallery"</p>
+					<p>+ Need to add news archive (popup?)</p>			
 				</div>
 			</div>
 			<div class="news-item active-news">
@@ -126,22 +128,22 @@
 					<div class="tile-title"></div>
 					<div class="schedule-detail-container">			
 						<div id="schedule-fri" class="schedule-detail active-schedule">
-							<p>12:00	Tech fair 1</p>
-							<p>13:00	Tech fair 2</p>
-							<p>14:30	Networking + sign-in</p>
+							<p>16:30	Tech fair + sign in</p>
 							<p>18:00	Opening ceremony</p>
 							<p>19:00	Dinner</p>
+							<p>19:30	Tech talk - Company 1</p>
+							<p>20:00	Tech talk - Company 2</p>
+							<p>20:30	Tech talk - Company 3</p>							
 						</div>
 						<div id="schedule-sat" class="schedule-detail">
-							<p>09:00	Breakfast</p>
-							<p>12:00	Lunch</p>
-							<p>15:00	Snack</p>
-							<p>18:00	Dinner</p>
-							<p>23:59	Midnight yoga</p>
+							<p>08:00	Breakfast</p>
+							<p>13:00	Lunch</p>							
+							<p>19:00	Dinner</p>
+							<p>23:59	Midnight movie</p>
 						</div>
 						<div id="schedule-sun" class="schedule-detail">
-							<p>09:00	Breakfast</p>
-							<p>12:00	Lunch</p>
+							<p>08:00	Breakfast</p>
+							<p>13:00	Lunch</p>
 							<p>19:00	Submission deadline</p>
 						</div>					
 					</div>
@@ -263,7 +265,7 @@
 			</button>
 			<iframe 
 				style="width:100%;height:100%"
-				src="https://docs.google.com/forms/d/1w7KlP-YzDP-fk4gv9b7gDIQS7fgLIvP9Jvt3PtUkl0I/viewform?embedded=true">				
+				src="https://docs.google.com/forms/d/e/1FAIpQLSf7TBV4Q1RcgkWGP9v8qu0HXsrHk-3ACoSnYyQLM0nEUntGMw/viewform?embedded=true">				
 			</iframe>
 			
 		</div>
@@ -287,30 +289,40 @@
 			</div>
 			<div class="popup-body">
 				<h3>Terabyte Sponsors</h3>
-				<a class="sponsor tera" href="https://ericsson.com">
-					<img src="img/sponsors/tera/ericsson.png" alt="ericsson">
-				</a>
-				<a class="sponsor tera" href="https://morganstanley.com">
-					<img src="img/sponsors/tera/morgan.png" alt="morgan">
-				</a>
+				<div class="frame">
+					<a target="_blank" href="https://ericsson.com">
+						<img class="sponsor tera" src="img/sponsors/tera/ericsson.png" alt="ericsson">
+					</a>
+				</div>
+				<div class="frame">
+					<a target="_blank" href="https://morganstanley.com">
+						<img class="sponsor tera" src="img/sponsors/tera/morgan.png" alt="morgan">
+					</a>
+				</div>
 				<h3>Gigabyte Sponsors</h3>
-				<a class="sponsor giga" href="https://kronos.com">
-					<img src="img/sponsors/giga/kronos.png" alt="kronos">
-				</a>
+				<div class="frame">
+					<a target="_blank" href="https://kronos.com">
+						<img class="sponsor giga" src="img/sponsors/giga/kronos.png" alt="kronos">
+					</a>
+				</div>
 				<h3>Megabyte Sponsors</h3>
-				<a class="sponsor mega" href="https://microsoft.com">
-					<img src="img/sponsors/mega/microsoft.png" alt="microsoft">
-				</a>				
+				<div class="frame">
+					<a target="_blank" href="https://microsoft.com">
+						<img class="sponsor mega" src="img/sponsors/mega/microsoft.png" alt="microsoft">
+					</a>
+				</div>
 				<h3>Kilobyte Sponsors</h3>
-				<a class="sponsor mega" href="https://cisco.com">
-					<img src="img/sponsors/kilo/cisco.png" alt="cisco">
-				</a>
-				<a class="sponsor mega" href="https://constellationgames.com">
-					<img src="img/sponsors/kilo/constellation.png" alt="constellation">
-				</a>
-				<a class="sponsor mega" href="https://google.com">
-					<img src="img/sponsors/kilo/google.png" alt="google">
-				</a>
+				<div class="frame">
+					<a target="_blank" href="https://cisco.com">
+						<img style="left:20%" class="sponsor kilo" src="img/sponsors/kilo/cisco.png" alt="cisco">
+					</a>
+					<a target="_blank" href="http://constellationgames.com">
+						<img style="left:50%" class="sponsor kilo" src="img/sponsors/kilo/constellation.png" alt="constellation">
+					</a>
+					<a target="_blank" href="https://google.com">
+						<img style="left:80%" class="sponsor kilo" src="img/sponsors/kilo/google.png" alt="google">
+					</a>
+				</div>
 			</div>
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
@@ -349,7 +361,7 @@
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Alina.jpg"/>
 					<h3>Alina - <span style="font-variant:small-caps">Sponsorship</span></h3>
-					<p>My name is Alina and I'm your VP External for this upcoming year. I'm currently in U3 Computer Engineering (low-key the best of the three) and I am so excited for the events we have planned this year. My job is to be the link between you and Industry so if you need a job or internship be on the lookout for events like: Codejam, Industry Dinner, Department Trip and Company Tours. If you need to talk to me or just want to chill you can find me jammin to Drake in the lounge (Trottier 1060) or on Trottier 5th. Bless Up.</p>
+					<p>Alina is currently in her third year in Computer Engineering at McGill. In addition to being in charge of the sponsorship for Codejam 2016 she is also VP External of ECSESS (Electrical, Computer, Software Engineering Student Society). Her eventual goal in life is to be a professional jam maker but for now she will settle with engineering.</p>
 				</div>				
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Erick.jpg"/>
@@ -359,7 +371,7 @@
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Michel.jpg"/>
 					<h3>Michel - <span style="font-variant:small-caps">Design</span></h3>
-					<p>Michel is a first-year Electrical Engineering student passionate about Dank Memes.</p>
+					<p>Michel is a first-year Electrical Engineering student passionate about coding, robotics and Dank Memes. When he isn’t working he is procrastinating with Netflix or using his Official Froshie Of The Year 2016 title. Master of wake up without hangovers.</p>
 				</div>
 				<div class="profile">
 					<img class="profile-pic" src="img/profile/Mike.jpg"/>
@@ -387,7 +399,7 @@
 				<p>Here at ECSESS CodeJam, we thrive to make world's most elegant jam. Our jams are made of 100% organic berries -- no artificial sweetner added!
 				Try out our award-winning trademarked strawberry jam found in your local food market. Our jam is so good it's to die for. Are you ready to be jammed?</p>
 				<p>If you're interested in sponsoring in our delicious jam business <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a>.</p>
-				<a id="Package" href="sponsors/sponsorship_package.pdf" target="_blank"><img src="img/sponsors/sponsorship_package_icon.jpg" alt="CodeJam 2016 Sponsorship Package"/></a>
+				<a id="Package" href="img/sponsors/sponsorship_package.pdf" target="_blank"><img src="img/sponsors/sponsorship_package_icon.jpg" alt="CodeJam 2016 Sponsorship Package"/></a>
 			</div>			
 			<div class="popup-footer">
 				<button class="footer-button exit">Close</button>
@@ -400,21 +412,21 @@
 		<div id="wheel">
 			<div id="frame-collection" href="#Sponsorspop" class="pop">
 				<div class="frame">
-					<div class="sponsor tera"><img src="img/sponsors/tera/ericsson.png" alt="ericsson"></div>
+					<img class="sponsor tera" src="img/sponsors/tera/ericsson.png" alt="ericsson">
 				</div>				
 			 	<div class="frame">
-					<div class="sponsor giga"><img src="img/sponsors/tera/morgan.png" alt="morganstanley"></div>
+					<img class="sponsor tera" src="img/sponsors/tera/morgan.png" alt="morganstanley">
 				</div>				
 				<div class="frame">
-				 	<div class="sponsor giga"><img src="img/sponsors/giga/kronos.png" alt="kronos"></div>
+				 	<img class="sponsor giga" src="img/sponsors/giga/kronos.png" alt="kronos">
 				</div>				
 				<div class="frame">
-				 	<div class="sponsor mega"><img src="img/sponsors/mega/microsoft.png" alt="microsoft"></div>
-				</div>				
+				 	<img class="sponsor mega" src="img/sponsors/mega/microsoft.png" alt="microsoft">
+				</div>
 				<div class="frame">
-				 	<div class="sponsor kilo"><img src="img/sponsors/kilo/cisco.png" alt="cisco"></div>
-				 	<div class="sponsor kilo"><img src="img/sponsors/kilo/constellation.png" alt="constellation"></div>
-				 	<div class="sponsor kilo"><img src="img/sponsors/kilo/google.png" alt="google"></div>
+				 	<img class="sponsor kilo" style="left:20%" src="img/sponsors/kilo/cisco.png" alt="cisco">
+				 	<img class="sponsor kilo" style="left:50%" src="img/sponsors/kilo/constellation.png" alt="constellation">
+				 	<img class="sponsor kilo" style="left:80%" src="img/sponsors/kilo/google.png" alt="google">
 				</div>
 			 </div>
 		</div>
