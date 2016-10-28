@@ -152,13 +152,34 @@ $(document).ready(function() {
 		var height = "12em";
 		$container.animate({"margin-top": "-="+height}, 1000, function() {
 			curr++;
-			if (curr === $sponsor.length+1) {
+			if (curr === $sponsor.length) {
 				curr = 0;
 				// $container.css("margin-top", "0");
                 $container.animate({"margin-top": "12rem"}, 1000);
 			}
 		});
 	}, 3000);
+})
+
+$(document).ready(function() {
+    var curr = 1;
+
+    var $gallery = $("#gallery-collection");
+    var $photos = $gallery.find(".gallery-photos");
+    var $photo = $photos.find(".gallery-photo");
+    //var width = $images[0].width;
+    var width = 100;
+
+    setInterval(function() {        
+        $gallery.animate({"margin-left":"-="+width+"%"}, 1000, function() {
+            curr++;
+            if (curr == $photo.length) {
+                curr = 0;
+                // $gallery.css("margin-left", "0");
+                $gallery.animate({"margin-left": "0%"}, 1000);
+            }
+        });
+    }, 3000);
 })
 
 

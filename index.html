@@ -46,9 +46,9 @@
 					</button>
 				</div>			
 				<div class="news-body">
-					<p>+ Fixed sponsorship popup bug</p>
-					<p>+ Fixed sponsor logo size bug</p>
-					<p>+ Fixed social icon on Firefox</p>					
+					<p>+ Added Gallery photos</p>
+					<p>+ Added popup up when click on schedule detail</p>
+					<p>+ Added Spotify link to JAMS tile</p>	
 				</div>
 			</div>
 			<div class="news-item active-news">
@@ -61,9 +61,8 @@
 				<div class="news-body">
 					<p>+ Schedule does not show completely on some machines/browsers (i.e. Alina's Chrome)</p>
 					<p>+ Need to add link to 4th social tile, JAMS tile</p>
-					<p>+ Need to add a popup for schedule</p>
-					<p>+ No photos in "Gallery"</p>
-					<p>+ Need to add news archive (popup?)</p>			
+					<p>+ Need to add news archive (popup?)</p>
+					<p>+ Missing link to Tilt</p>		
 				</div>
 			</div>
 			<div class="news-item active-news">
@@ -123,7 +122,7 @@
 
 <div class="row">
 	<div class="col50">
-		<div id="tile-schedule" class="thumbnail large pop" href="#popup-schedule">
+		<div id="tile-schedule" class="thumbnail large">
 			<img src="img/tile/saki.jpg" alt="">
 			<div class="tile-title"></div>
 			<div class="schedule-title-container">
@@ -131,20 +130,24 @@
 				<div data-day="sat" class="schedule-title">Saturday</div>
 				<div data-day="sun" class="schedule-title">Sunday</div>		
 			</div>
-			<div class="schedule-detail-container">			
+			<div class="schedule-detail-container pop" href="#popup-schedule">			
 				<div class="schedule-fri schedule-detail active-schedule">
+					<p>09:00	Daily challenge released</p>
 					<p>16:30	Tech fair + sign in</p>
 					<p>18:00	Opening ceremony</p>
 					<p>19:00	Dinner</p>
 					<p>19:30	Tech talk - Company 1</p>
 					<p>20:00	Tech talk - Company 2</p>
-					<p>20:30	Tech talk - Company 3</p>							
+					<p>20:30	Tech talk - Company 3</p>
+					<p>23:59	Daily challenge due</p>
 				</div>
 				<div class="schedule-sat schedule-detail">
+					<p>09:00	Daily challenge released</p>
 					<p>08:00	Breakfast</p>
 					<p>13:00	Lunch</p>							
 					<p>19:00	Dinner</p>
-					<p>23:59	Midnight movie</p>
+					<p>23:00	Midnight movie</p>
+					<p>23:59	Daily challenge due</p>
 				</div>
 				<div class="schedule-sun schedule-detail">
 					<p>08:00	Breakfast</p>
@@ -153,14 +156,14 @@
 				</div>					
 			</div>
 		</div>
-					</div><!--
-				--><div class="col50">
-				<div href="#Form" class="thumbnail medium pop" data-rel="popup" >							
-					<img src="img/tile/wristband.jpg" alt="">
-					<div class="tile-title"><div class="table"><h1>Join</h1></div></div>
-				</div><!--
-			--><div href="#Pay" class="thumbnail medium pop">
-			<img src="img/tile/breakfast.jpg" alt="">
+	</div><!--
+ --><div class="col50">
+		<div href="#Form" class="thumbnail medium pop" data-rel="popup" >							
+			<img src="img/tile/wristband.jpg" alt="">
+				<div class="tile-title"><div class="table"><h1>Join</h1></div></div>
+			</div><!--
+		 --><div href="#Pay" class="thumbnail medium pop">
+				<img src="img/tile/breakfast.jpg" alt="">
 			<div class="tile-title"><div class="table"><h1>Pay</h1></div></div>
 		</div>
 	</div>
@@ -175,16 +178,30 @@
 		</div>				
 		<div class="col25">
 			<div href="#News" class="thumbnail large">
-				<img src="img/tile/jams.jpg" alt=""></a>
+				<a target="_blank" href="https://open.spotify.com/user/224olx7eyeqck6qgsrsxp7i7a/playlist/3UMtKUT5gxLt1In0BVl21m"><img src="img/tile/jams.jpg"/>
 				<div class="tile-title"><div class="table"><h1>JAMS</h1></div></div>
+				</a>
 			</div>
 		</div>
 	</div>	
 	<div class="row">
 		<div class="col100">
-			<div class="thumbnail wide" id="gallery">
-				<img src="img/tile/poster.jpg" alt=""/>
-				<div class="tile-title"><div class="table"><h1>Gallery</h1></div></div>
+			<div class="thumbnail wide" id="gallery">				
+				<!--<div class="tile-title"><div class="table"><h1>Gallery</h1></div></div>-->
+				<div id="gallery-collection">
+					<div class="gallery-photos">
+						<div class="gallery-photo"><img src="img/gallery/img0.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img1.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img2.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img3.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img4.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img5.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img6.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img7.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img8.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/img9.jpg"></div>
+					</div>			
+				</div>
 			</div>
 		</div>
 	</div>
@@ -260,19 +277,23 @@
 		<div class="popup-body">			
 			<span style="text-align:center"><h3>Friday</h3></span>
 			<div style="margin-left:1rem">
+				<p>09:00	<span style="margin-left:4rem">Daily challenge released</span></p>
 				<p>16:30	<span style="margin-left:4rem">Tech fair + sign in</span></p>
 				<p>18:00	<span style="margin-left:4rem">Opening ceremony</span></p>
 				<p>19:00	<span style="margin-left:4rem">Dinner</span></p>
 				<p>19:30	<span style="margin-left:4rem">Tech talk - Company 1</span></p>
 				<p>20:00	<span style="margin-left:4rem">Tech talk - Company 2</span></p>
 				<p>20:30	<span style="margin-left:4rem">Tech talk - Company 3</span></p>
+				<p>23:59	<span style="margin-left:4rem">Daily challenge due</span></p>
 			</div>
 			<span style="text-align:center"><h3>Saturday</h3></span>
-			<div style="margin-left:1rem">
+			<div style="margin-left:1rem">				
 				<p>08:00	<span style="margin-left:4rem">Breakfast</span></p>
+				<p>09:00	<span style="margin-left:4rem">Daily challenge released</span></p>
 				<p>13:00	<span style="margin-left:4rem">Lunch</span></p>
 				<p>19:00	<span style="margin-left:4rem">Dinner</span></p>
-				<p>23:59	<span style="margin-left:4rem">Midnight movie</span></p>
+				<p>23:00	<span style="margin-left:4rem">Midnight movie</span></p>
+				<p>23:59	<span style="margin-left:4rem">Daily challenge due</span></p>
 			</div>
 			<span style="text-align:center"><h3>Sunday</h3></span>
 			<div style="margin-left:1rem">

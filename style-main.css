@@ -210,6 +210,31 @@ a.menu-link { display: block; }
 
 #gallery { margin: 1% 0.5%; }
 
+#gallery-collection {
+	display: block;
+	height: 100%; width: 1000%;
+	overflow: hidden;
+	position: absolute;
+} 
+
+#gallery-collection .gallery-photos {
+	display: block;
+	height: 100%; width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#gallery-collection .gallery-photo { 
+	float: left;
+	width: 10%;
+	height: 100%;
+}
+
+#gallery-collection img { 
+	position: relative; 
+	width: 100%;
+}
+
 .thumbnail {
 	border: 1px solid #666;
 	-webkit-border-radius: 0.5rem;
@@ -393,8 +418,9 @@ a.menu-link { display: block; }
 	.tile-title h1 { font: 100 4.5vw 'Lato', sans-serif; }
 
 	.schedule-title { font-size: 1.5vw; }
-	.schedule-title:hover { font-size: 3vw; }	
+	.schedule-title:hover { font-size: 3vw; }
 	.active-day { font-size: 3vw; }
+	.schedule-detail { font-size: 1vw; }
 }
 
 
