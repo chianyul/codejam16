@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 /*--------- Schedule tile ----------*/
 $(document).ready(function() {
-    var $tile_schedule = $("#tile_schedule");
+    var $tile_schedule = $("#tile-schedule");
     var $day = $tile_schedule.find(".schedule-title");
     var $content = $tile_schedule.find(".schedule-detail");
 
@@ -117,7 +117,7 @@ $(document).ready(function() {
         $day.removeClass("active-day");
         $(this).addClass("active-day");
         $content.removeClass("active-schedule");
-        $("#schedule-"+day_id).addClass("active-schedule");
+        $(".schedule-"+day_id).addClass("active-schedule");
     })
 })
 
