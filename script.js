@@ -162,7 +162,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-    var curr = 1;
+    var curr = 0;
 
     var $gallery = $("#gallery-collection");
     var $photos = $gallery.find(".gallery-photos");
@@ -173,10 +173,10 @@ $(document).ready(function() {
     setInterval(function() {        
         $gallery.animate({"margin-left":"-="+width+"%"}, 1000, function() {
             curr++;
-            if (curr == $photo.length) {
+            if (curr == $photo.length-1) {
                 curr = 0;
                 // $gallery.css("margin-left", "0");
-                $gallery.animate({"margin-left": "0%"}, 1000);
+                $gallery.delay(3000).animate({"margin-left": "0%"}, 1000);
             }
         });
     }, 3000);

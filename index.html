@@ -9,7 +9,8 @@
 	<meta name="description" content="">
 	<link rel="icon" href = "codejam.ico"/>
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,500|Arvo|Anonymous+Pro:400,700" rel="stylesheet" type="text/css">
-	<link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<!--<link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="style-main.css"/>
 	<link rel="stylesheet" href="style-popup.css"/>
 	<link rel="stylesheet" href="style-livechat.css"/>
@@ -29,10 +30,9 @@
 				<li class="menu-link pop" href="#Team"><i class="fa fa-users fa-lg fa-fw" aria-hidden="true"></i> Our team</li>
 				<li class="menu-link pop" href="#SponsorUs"><i></i>Sponsor us</li>
 				<!--<li class="menu-link"> DRAKE it up</li>-->
-				<a  class="menu-link" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
+				<a  class="menu-link" target="_blank" href="http://ecsess.mcgilleus.ca">Visit ECSESS</a>
 			</ul>
 		</nav>
-
 	</header>
 
 	<section id="news-container">
@@ -40,45 +40,31 @@
 		<div id="news">	
 			<div class="news-item active-news">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Feature updates</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Welcome</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
-					<p>+ Added Gallery photos</p>
-					<p>+ Added popup up when click on schedule detail</p>
-					<p>+ Added Spotify link to JAMS tile</p>	
+					<p>CodeJam website is now LIVE!</p>
+					<p>We will be updating the information in the coming days, so please be patient. It's still a work in progress.</p>
+					<p>Please contact ecsess.vpexternal@mail.mcgill.ca for any questions you have about the website.</p>
 				</div>
 			</div>
 			<div class="news-item active-news">
 				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Known issues</h2>
+					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>Registration</h2>
 					<button class="header-button dismiss-news">
 						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
 					</button>
 				</div>			
 				<div class="news-body">
-					<p>+ Schedule does not show completely on some machines/browsers (i.e. Alina's Chrome)</p>
-					<p>+ Need to add link to 4th social tile, JAMS tile</p>
-					<p>+ Need to add news archive (popup?)</p>
-					<p>+ Missing link to Tilt</p>		
-				</div>
-			</div>
-			<div class="news-item active-news">
-				<div class="news-header">
-					<h2><i class="fa fa-bell-o" aria-hidden="true" style="margin:0 .5rem 0 0"></i>News header</h2>
-					<button class="header-button dismiss-news">
-						<i class="fa fa-trash" aria-hidden="true" style="color:#fff;"></i>
-					</button>
-				</div>			
-				<div class="news-body">
-					<p>News body</p>				
+					<p>Registration form will be live in just a few days.</p>
 				</div>
 			</div>
 		</div>
 		
-		<div id="archive-link"><div class="table"><a href="#">News Archives ></a></p></div></div>
+		<!--<div id="archive-link"><div class="table"><a href="#">News Archives ></a></p></div></div>-->
 	</section>
 
 	<section id="tile-container">		
@@ -136,9 +122,9 @@
 					<p>16:30	Tech fair + sign in</p>
 					<p>18:00	Opening ceremony</p>
 					<p>19:00	Dinner</p>
-					<p>19:30	Tech talk - Company 1</p>
-					<p>20:00	Tech talk - Company 2</p>
-					<p>20:30	Tech talk - Company 3</p>
+					<p>19:30	Tech talk - Company TBA</p>
+					<p>20:00	Tech talk - Company TBA</p>
+					<p>20:30	Tech talk - Company TBA</p>
 					<p>23:59	Daily challenge due</p>
 				</div>
 				<div class="schedule-sat schedule-detail">
@@ -174,7 +160,11 @@
 				<div class="thumbnail medium" id="FB"><a target="_blank" href="https://www.facebook.com/mcgillcodejam2016/"><img src="img/tile/fb.png"/></a></div><!--
 			 --><div class="thumbnail medium" id="TW"><a target="_blank" href="https://twitter.com/ecsess/"><img src="img/tile/tw.png"/></a></div><!--
 			 --><div class="thumbnail medium" id="IN"><a target="_blank" href="https://www.instagram.com/mcgill_ecsess/"><img src="img/tile/in.png"/></a></div><!--
-			--><div class="thumbnail medium" id="EM"><a target="_blank" href="mailto:ecsess.vpexternal@mcgilleus.ca"><img src="img/tile/gt.png"/></a></div>
+			 --><div class="thumbnail medium" id="EM">
+			 		<!--<a target="_blank" href="mailto:ecsess.vpexternal@mcgilleus.ca">-->
+			 			<img src="img/tile/gt.png"/>
+			 		<!--</a>-->
+			 	</div>
 		</div>				
 		<div class="col25">
 			<div href="#News" class="thumbnail large">
@@ -190,16 +180,16 @@
 				<!--<div class="tile-title"><div class="table"><h1>Gallery</h1></div></div>-->
 				<div id="gallery-collection">
 					<div class="gallery-photos">
-						<div class="gallery-photo"><img src="img/gallery/img0.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img1.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img2.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img3.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img4.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img5.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img6.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img7.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img8.jpg"></div>
-						<div class="gallery-photo"><img src="img/gallery/img9.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img0.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img1.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img2.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img3.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img4.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img5.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img6.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img7.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img8.jpg"></div>
+						<div class="gallery-photo"><img src="img/gallery/compressed/img9.jpg"></div>
 					</div>			
 				</div>
 			</div>
@@ -215,7 +205,7 @@
 		</div>
 		<div class="popup-body">
 			<p>CodeJam is a 48-hour team-based programming competition fueled by great minds and energy drinks.</p>
-			<p>McGill University's Electrical, Computer and Software Engineering Student Society (ECSESS) is collaborating with some of Montreal's biggest software companies to make a challenging, real-world application problem for you to solve. ECSESS's largest event is back for its sixth year and this time it's all about bioinformatics.</p>
+			<p>McGill University's Electrical, Computer and Software Engineering Student Society (ECSESS) is collaborating with some of Montreal's biggest software companies to make a challenging, real-world application problem for you to solve. ECSESS's largest event is back for its 7th year and this time it's all about Human Computer Interaction.</p>
 		</div>
 		<div class="popup-footer">
 			<button class="footer-button exit">Close</button>
@@ -227,12 +217,15 @@
 			<h2>FAQs</h2>
 		</div>
 		<div class="popup-body">
+			<!--
 			<h4>What is CodeJam?</h4><p>Answer 1</p>
 			<h4>How do I enter?</h4><p>Answer 2</p>
 			<h4>Question 3</h4><p>Answer 3</p>
 			<h4>Question 4</h4><p>Answer 4</p>
 			<h4>Question 5</h4><p>Answer 5</p>
 			<h4>Question 6</h4><p>Answer 6</p>
+			-->
+			<h4>When will FAQs be up?</h4><p>More coming soon! For now, feel free to check out our brand new CodeJam site.</p>
 		</div>
 		<div class="popup-footer">
 			<button class="footer-button exit">Close</button>				
@@ -244,9 +237,9 @@
 			<h2>Tech Talks</h2>
 		</div>
 		<div class="popup-body">
-			<h4>Company 1</h4><p>Event description 1</p>
-			<h4>Company 2</h4><p>Event description 2</p>
-			<h4>Company 3</h4><p>Event description 3</p>
+			<h4>Company TBA</h4><p>Starting at 19:30. More coming soon!</p>
+			<h4>Company TBA</h4><p>Starting at 20:00. More coming soon!</p>
+			<h4>Company TBA</h4><p>Starting at 20:30. More coming soon!</p>
 		</div>
 		<div class="popup-footer">
 			<button class="footer-button exit">Close</button>
@@ -260,9 +253,10 @@
 		<div class="popup-body">		
 			<h3>List of companies</h3>
 			<ul>
-				<li>Company 1</li>
-				<li>Company 2</li>
-				<li>Company 3</li>
+				<li>Ericsson</li>
+				<li>Morgan Stanley</li>
+				<li>Kronos</li>
+				<li>Microsoft</li>
 			</ul>		
 		</div>
 		<div class="popup-footer">
@@ -274,7 +268,8 @@
 		<div class="popup-header">			
 			<h2>Schedule</h2>
 		</div>
-		<div class="popup-body">			
+		<div class="popup-body">
+			<p>Please know that this is the preliminary schedule. The official schedule will be finalized in the coming weeks.</p>
 			<span style="text-align:center"><h3>Friday</h3></span>
 			<div style="margin-left:1rem">
 				<p>09:00	<span style="margin-left:4rem">Daily challenge released</span></p>
@@ -318,9 +313,9 @@
 			<i class="fa fa-times" aria-hidden="true" style="color:#fff;"></i>
 		</button>
 		<iframe 
-		style="width:100%;height:100%"
-		src="https://docs.google.com/forms/d/e/1FAIpQLSf7TBV4Q1RcgkWGP9v8qu0HXsrHk-3ACoSnYyQLM0nEUntGMw/viewform?embedded=true">				
-	</iframe>
+			style="width:100%;height:100%"
+			src="https://docs.google.com/forms/d/e/1FAIpQLSf7TBV4Q1RcgkWGP9v8qu0HXsrHk-3ACoSnYyQLM0nEUntGMw/viewform?embedded=true">
+		</iframe>
 
 </div>
 
@@ -329,8 +324,8 @@
 		<h2>Payment</h2>
 	</div>
 	<div class="popup-body">
-		<p>You can pay for your ticket in cash at the ECSESS Lounge or you can pay online by <a href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="img/sponsors/logo_tilt.png" id="tilt_link"/></a></p>
-
+		<p>You can pay for your ticket in cash at the ECSESS Lounge or you can pay online by Tilt (link under way)</p>
+		<!--<a target="_blank" href="https://www.tilt.com/tilts/ecsess-winter-banquet-2016"><img src="img/sponsors/logo_tilt.png" id="tilt_link"/></a></p>-->
 	</div>
 	<div class="popup-footer">
 		<button class="footer-button exit">Close</button>
@@ -373,7 +368,7 @@
 			<a target="_blank" href="http://constellationgames.com">
 				<img style="left:50%" class="sponsor kilo" src="img/sponsors/kilo/constellation.png" alt="constellation">
 			</a>
-			<a target="_blank" href="https://google.com">
+			<a target="_blank" href="https://google.com/about/company">
 				<img style="left:80%" class="sponsor kilo" src="img/sponsors/kilo/google.png" alt="google">
 			</a>
 		</div>
@@ -381,24 +376,6 @@
 	<div class="popup-footer">
 		<button class="footer-button exit">Close</button>
 	</div>
-</div>
-
-<div id="Feedback" class="popup" tabindex="-1">			
-	<div class="popup-header">
-		<h2>Ask a Question</h2>
-	</div>
-	<form action="email.php" method="POST">
-		<div class="popup-body">
-			<p>If you have any questions not answered in the FAQ section, please ask us here. We will answer you as soon as possible!</p>							
-			<p>Name: <input type="text" name="Feedback-name" id="Feedback-name"/></p>
-			<p>Email: <input type="text" name="Feedback-email" id="Feedback-email"/></p>					
-			<textarea type="text" name="Feedback-message" id="Feedback-message" placeholder="Your message..."/></textarea>					
-		</div>
-		<div class="popup-footer">
-			<input class="footer-button submit" type="submit" value="Send">Send</input>
-			<button class="footer-button exit">Close</button>				
-		</div>
-	</form>
 </div>
 
 <div id="Team" class="popup" tabindex="-1">
@@ -427,15 +404,15 @@
 			<img class="profile-pic" src="img/profile/Michel.jpg"/>
 			<p>Michel is a first-year Electrical Engineering student passionate about coding, robotics and Dank Memes. When he isn’t working he is procrastinating with Netflix or using his Official Froshie Of The Year 2016 title. Master of wake up without hangovers.</p>
 		</div>
-		<div class="profile">					
+		<!--<div class="profile">					
 			<h3>Mike - <span style="font-variant:small-caps">Logistics</span></h3>
 			<img class="profile-pic" src="img/profile/Mike.jpg"/>
 			<p>Placeholder</p>
-		</div>
+		</div>-->
 		<div class="profile">					
 			<h3>Suleman - <span style="font-variant:small-caps">Food</span></h3>
 			<img class="profile-pic" src="img/profile/Suleman.jpg"/>
-			<p>Placeholder</p>
+			<p>Suleman is in his second year of Software Engineering at Mcgill. Suleman, also known as “The People's U2 Software Rep” can usually be found in the lounge destroying Erick at FIFA and Call of Duty. When he’s not in the lounge he is most likely making gains in the gym. He also enjoys cooking/eating dope food (that’s why he is VP of Food). He also likes programming in Java and making iOS apps in Swift. Hopefully he will become the first ever programmer to deadlift 5 plates!</p>
 		</div>
 	</div>
 	<div class="popup-footer">
@@ -448,7 +425,6 @@
 		<h2>Sponsor Code.Jam()</h2>
 	</div>
 	<div class="popup-body">
-		<p>I copied a blurb from McGill Robotics website, but Alina did not approve. So here is just some placeholder texts:</p>
 		<p>Here at ECSESS CodeJam, we thrive to make world's most elegant jam. Our jams are made of 100% organic berries -- no artificial sweetner added!
 			Try out our award-winning trademarked strawberry jam found in your local food market. Our jam is so good it's to die for. Are you ready to be jammed?</p>
 			<p>If you're interested in sponsoring in our delicious jam business <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a>.</p>
@@ -488,11 +464,11 @@
 <footer>
 	<div id="footer" style="padding-bottom:3rem">
 		<p>Contact information: <a class="email" href="mailto:ecsess.vpexternal@mcgilleus.ca">ecsess.vpexternal@mcgilleus.ca</a></p>
-		<p>Electrical, Computer and Software Engineering Student Society of McGill University (ECSESS)</p>			
+		<p>Electrical, Computer and Software Engineering Student Society of McGill University (ECSESS)</p>	
 	</div>		  
 </footer> 
 
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>	
+<script src="lib/jquery-3.1.1.min.js"></script>	
 <script src="script.js"></script>	
 
 <script src="googleMap.js"></script>

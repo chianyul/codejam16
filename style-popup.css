@@ -249,7 +249,7 @@
 }
 
 #Package {
-	border-radius: 100%;
+	/* border-radius: 100%; */
 	box-shadow: 1px 1px 4px #333;
 	display: block;
 	margin: 3rem auto 0;

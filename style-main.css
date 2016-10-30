@@ -313,6 +313,7 @@ a.menu-link { display: block; }
 	position: absolute;
 	right: .5rem; top: .5rem;
 	text-align: right;
+	z-index: 3;
 }
 
 .schedule-detail-container {
