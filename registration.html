@@ -5,86 +5,78 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CodeJam Registration</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-	<style>
-		
-	</style>
+	<link rel="stylesheet" href="lib/materialize-v0.97.8/css/materialize.min.css">
+	<link rel="stylesheet" href="style-form.css"/>
 </head>
 <body>
-	<form class="main" id="form" novalidate="novalidate" style="max-width:480px; margin:40px auto;">
+
+	<form class="main" id="form">
 		<div id="forminner">
 
 			<div class="row">
 				<div class="input-field col s12">
-					<h4>code.jam() 2016 Registration</h4>
-					<span class="ctrlq-description">Description of CodeJam, link to Tilt etc.</span>
+					<div id="form-title"><img src="img/header/title_flat.png"><span>2016 Registration</span></div>
+					<p class="form-description">Description of CodeJam, link to Tilt etc.</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input id="ctrlq31351" class="validate" required="required" data-error="#err31351" name="First Name" type="text" value="">
-					<label for="ctrlq31351">First Name</label>
-					<div id="err31351"></div>
+					<input type="text" id="fname" class="validate" required="required" name="fname" value="">
+					<label for="fname">First Name</label>					
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input id="ctrlq31352" class="validate" required="required" data-error="#err31352" name="Last Name" type="text" value="">
-					<label for="ctrlq31352">Last Name</label>
-					<div id="err31352"></div>
+					<input type="text" id="lname" class="validate" required="required" name="lname" value="">
+					<label for="lname">Last Name</label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input id="ctrlq31353" class="validate" required="required" data-error="#err31353" name="Email" type="text" value="">
-					<label for="ctrlq31353">Email</label>
-					<div id="err31353"></div>
+					<input type="email" id="email" class="validate" required="required" name="email" value="">
+					<label for="email" data-error="ERROR: invalid email">Email</label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<p for="Major">Major</p>
+					<p for="major">Major</p>
 					<div>
-						<input id="ctrlq-field-31355-0" class="validate" required="required" data-error="#err31355" name="Major" type="radio" value="Electrical">
-						<label for="ctrlq-field-31355-0">Electrical</label>
+						<input type="radio" id="electrical" class="validate" required="required" name="major" value="Electrical">
+						<label for="electrical">Electrical</label>
 					</div>
 					<div>
-						<input id="ctrlq-field-31355-1" class="validate" name="Major" required="required" type="radio" value="Computer">
-						<label for="ctrlq-field-31355-1">Computer</label>
+						<input type="radio" id="major-computer" class="validate" required="required" name="major" value="Computer">
+						<label for="major-computer">Computer</label>
 					</div>
 					<div>
-						<input id="ctrlq-field-31355-2" class="validate" name="Major" required="required" type="radio" value="Software">
-						<label for="ctrlq-field-31355-2">Software</label>
+						<input type="radio" id="major-software" class="validate" required="required" name="major" value="Software">
+						<label for="major-software">Software</label>
 					</div>
 					<div>
-						<input id="ctrlq-field-31355-3" class="validate" name="Major" required="required" type="radio" value="Comp Sci">
-						<label for="ctrlq-field-31355-3">Comp Sci</label>
+						<input type="radio" id="major-cs" class="validate" required="required" name="major" value="Comp Sci">
+						<label for="major-cs">Comp Sci</label>
 					</div>
 					<div>
-						<input id="ctrlq-field-31355-4" class="validate" name="Major" required="required" type="radio" value="Others">
-						<label for="ctrlq-field-31355-4">Others</label>
-					</div>
-					<div class="input-field">
-						<div id="err31355"></div>
+						<input type="radio" id="major-others" class="validate" required="required" name="major" value="Others">
+						<label for="major-others">Others</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<select id="ctrlq-field-31357" name="Year" class="validate" data-error="#err31357" required="required" aria-required="required">						
-						<option value="" disabled="" selected="">Year</option>
+					<select id="year" name="Year" class="browser-default" required="required">
+						<option value="" disabled selected>Year</option>
 						<option value="U0">U0</option>
 						<option value="U1">U1</option>
 						<option value="U2">U2</option>
 						<option value="U3">U3</option>
 						<option value="U4+">U4+</option>		
-					</select>
-					<div id="err31357"></div>
+					</select>					
 				</div>
 			</div>
 
@@ -92,38 +84,32 @@
 				<div class="input-field col s12">
 					<p for="Challenge Type">Challenge Type</p>
 					<div>
-						<input id="ctrlq-field-31360-0" class="validate" required="required" data-error="#err31360" name="Challenge Type" type="radio" value="Junior">
-						<label for="ctrlq-field-31360-0">Junior</label>
+						<input type="radio" id="challenge-junior" class="validate" required="required" name="Challenge Type" value="Junior">
+						<label for="challenge-junior">Junior</label>
 					</div>
 					<div>
-						<input id="ctrlq-field-31360-1" class="validate" name="Challenge Type" required="required" type="radio" value="Senior">
-						<label for="ctrlq-field-31360-1">Senior</label>
-					</div>
-					<div class="input-field">
-						<div id="err31360">
-						</div>
+						<input type="radio" id="challenge-senior" class="validate" required="required" name="Challenge Type" value="Senior">
+						<label for="challenge-senior">Senior</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input id="ctrlq31354" class="validate" required="required" data-error="#err31354" name="Team Name" type="text" value="">
-					<label for="ctrlq31354">Team Name</label>
-					<div id="err31354"></div>
+					<input type="text" id="team" class="validate" required="required" name="Team Name" value="">
+					<label for="team">Team Name</label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<select id="ctrlq-field-31356" name="T-shirt size" class="validate" data-error="#err31356" required>
+					<select id="shirt" required="required" class="browser-default" name="T-shirt size">
 						<option value="" disabled selected>T-shirt size</option>
-						<option value="S" S>S</option>
-						<option value="M" M>M</option>
-						<option value="L" L>L</option>
-						<option value="XL" XL>X</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
 					</select>
-					<div id="err31356"></div>
 				</div>
 			</div>
 
@@ -147,21 +133,22 @@
 			</div>
 
 			<div class="row">
-				<div class="input-field col s12" id = "progress"></div>
+				<div class="input-field col s12" id="progress"></div>
 			</div>
 		</div>
+
 		<div id="success" style="display:none">
 			<h5 class="left-align teal-text">File Uploaded</h5>
 			<p>Your file has been successfully uploaded!</p>						
 		</div>
 	</form>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="lib/jquery-3.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-	<script src="https://gumroad.com/js/gumroad.js"></script>
 
 	<script>
-		var file, 
+
+		var file,
 		reader = new FileReader();
 
 		reader.onloadend = function(e) {
