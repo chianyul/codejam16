@@ -35,6 +35,10 @@ html {
 	width: 23rem;
 }
 
+select {
+	color: #000;
+}
+
 @media (min-width: 35em) {
 	#form-title, #form-title span {
 		text-align: left;

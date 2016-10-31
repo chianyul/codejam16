@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base target="_blank">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CodeJam 2016 Registration</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<!--<link rel="stylesheet" href="style-form.css"/>-->
+
+	<style type="text/css">
+		html {
+			background: rgb(50, 45, 40) url("http://codejam.mcgilleus.ca/img/background/stars.jpg") no-repeat center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
+		#form {
+			box-shadow: .1rem .1rem .3em 0 #000;
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			max-width: 40rem; 
+			margin: 40px auto;
+		}
+
+		#form-title {
+			text-align: center;
+		}
+
+		#form-title img {
+			display: inline-block;
+			width: 15rem;
+		}
+
+		#form-title span {
+			display: inline-block;
+			font-size: 2.5rem;
+			font-weight: 100;
+			transform: translate(0, -1rem);
+			width: 23rem;
+		}
+
+		select {
+			color: #000;
+		}
+
+		@media (min-width: 35em) {
+			#form-title, #form-title span {
+				text-align: left;
+			}
+		}
+	</style>
+
+	<script type="text/javascript">
+		function showfield(major){
+			var text = document.getElementsByClassName('major-text');
+			var drop = document.getElementById('major-drop');
+			if (major == "Others" || major == "Major") {
+				for (i=0; i<text.length; i++) {
+					text[i].style.display="block";
+				}
+				drop.style.display="none";
+			} else {
+				for (i=0; i<text.length; i++) {
+					text[i].style.display="none";
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<form class="main" id="form">
+		<div id="forminner">
+
+			<div class="row">
+				<div class="input-field col s12">
+					<div id="form-title"><img src="http://codejam.mcgilleus.ca/img/header/title_flat.png"><span>2016 Registration</span></div>
+					<p class="form-description">Description of CodeJam, link to Tilt etc.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<input type="text" id="fname" class="validate required" required="" aria-required="true" name="First" value="">
+					<label for="fname">First Name</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<input type="text" id="lname" class="validate required" required="" aria-required="true" name="Last" value="">
+					<label for="lname">Last Name</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<input type="email" id="email" class="validate required" required="" aria-required="true" name="Email" value="">
+					<label for="email" data-error="invalid_email">Email</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<select id="major-drop" class="validate required browser-default" required="" aria-required="true" name="Major" onchange="showfield(this.value)">
+						<option value="" disabled selected>Major</option>
+						<option value="Electrical">Electrical</option>
+						<option value="Computer">Computer</option>
+						<option value="Software">Software</option>
+						<option value="Comp Sci">Comp Sci</option>
+						<option value="Others">Others</option>
+					</select>
+					<input style="display:none;" type="text" id="others" class="validate major-text" required="" aria-required="true" name="Major" value="">
+					<label style="display:none;" for="major-text" class="major-text">Major</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<select id="year" name="Year" class="validate required browser-default" required="" aria-required="true">
+						<option value="" disabled selected>Year</option>
+						<option value="U0">U0</option>
+						<option value="U1">U1</option>
+						<option value="U2">U2</option>
+						<option value="U3">U3</option>
+						<option value="U4+">U4+</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<p>Challenge Type</p>
+					<div>
+						<input type="radio" id="challenge-junior" class="validate required" required="" aria-required="true" name="Challenge" value="Junior">
+						<label for="challenge-junior">Junior</label>
+					</div>
+					<div>
+						<input type="radio" id="challenge-senior" class="validate required" required="" aria-required="true" name="Challenge" value="Senior">
+						<label for="challenge-senior">Senior</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<input type="text" id="team" class="validate required" required="" aria-required="true" name="Team" value="">
+					<label for="team">Team Name</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<select id="shirt" required="" aria-required="true" class="validate required browser-default" name="Tshirt">
+						<option value="" disabled selected>T-shirt size</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<p for="Payment">Payment</p>
+					<div>
+						<input type="radio" id="payment-tilt" class="validate required" required="" aria-required="true" name="Payment" value="Tilt">
+						<label for="payment-tilt">Tilt</label>
+					</div>
+					<div>
+						<input type="radio" id="payment-cash" class="validate required" required="" aria-required="true" name="Payment" value="Cash">
+						<label for="payment-cash">Cash</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea type="textarea" id="comments" class="validate materialize-textarea" name="Comments" value=""></textarea>
+					<label for="comments">Comments</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="file-field input-field col s12">
+					<p>Resume</p>
+					<div class="btn">
+						<span>Browse</span>
+						<input id="files" type="file">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text" placeholder="Select a file on your computer">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s6">
+					<button class="waves-effect waves-light btn submit-btn" type="submit" onclick="submitForm(); return false;">Submit</button>
+				</div>   
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12" id="progress"></div>
+			</div>
+		</div>
+
+		<div id="success" style="display:none">
+			<h4 class="left-align teal-text">Form submitted</h4>
+			<p>You are now registered to CodeJam 2016!</p>
+			<a href="http://codejam.mcgilleus.ca/">Return to CodeJam homepage</a>
+		</div>
+	</form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+	<script>
+
+		var file,
+		reader = new FileReader();
+
+		reader.onloadend = function(e) {
+			if (e.target.error != null) {
+				showError("File " + file.name + " could not be read.");
+				return;
+			} else {
+				google.script.run
+				.withSuccessHandler(showSuccess)
+				.uploadFileToGoogleDrive(e.target.result, file.name, $('input#fname').val(), $('input#lname').val());
+			}
+		};
+
+		function showSuccess(e) {
+			if (e === "OK") { 
+				$('#forminner').hide();
+				$('#success').show();
+			} else {
+				showError(e);
+			}
+		}
+
+		function submitForm() {
+
+			var required = $(".required");
+			for (i=0; i<required.length; i++) {
+				if (required[i].value == null || required[i].value == "") {
+					showError("Missing required fields: " + required[i].name);
+					return false;
+				}
+			}
+
+			var files = $('#files')[0].files;
+
+			if (files.length === 0) {
+				showError("Please select a file to upload");
+				return;
+			}
+
+			file = files[0];
+
+			if (file.size > 1024 * 1024 * 5) {
+				showError("The file size should be < 5 MB.");
+				return;
+			}
+
+			var q0 = $("#fname").val();
+			var q1 = $("#lname").val();
+			var q2 = $("#email").val();
+			var major = document.getElementById("major-drop");
+			if (major[major.selectedIndex].value == "Others") {
+				var q3 = $("#others").val();	
+			} else {
+				var q3 = major[major.selectedIndex].value;
+			}
+			var year = document.getElementById("year");			
+			var q4 = year[year.selectedIndex].value;
+			var q5 = $("input[name='Challenge']:checked").val();
+			var q6 = $("#team").val();
+			var shirt = document.getElementById("shirt");
+			var q7 = shirt[shirt.selectedIndex].value;
+			var q8 = $("input[name='Payment']:checked").val();
+			var q9 = $("#comments").val();
+			
+			google.script.run.addResponseToSheet(q0, q1, q2, q3, q4, q5, q6, q7, q8, q9);
+
+			showMessage("Uploading file..");
+
+			reader.readAsDataURL(file);
+		}
+
+		function showError(e) {
+			$('#progress').addClass('red-text').html(e);
+		}
+
+		function showMessage(e) {
+			$('#progress').removeClass('red-text').html(e);
+		}
+	</script>
+</body>
+</html>
