@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CodeJam 2016 Registration</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 	<!--<link rel="stylesheet" href="style-form.css"/>-->
 
 	<style type="text/css">
@@ -15,14 +15,14 @@
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
-			background-size: cover;
+			background-size: cover;				
 		}
 
 		#form {
 			box-shadow: .1rem .1rem .3em 0 #000;
 			background: rgba(0, 0, 0, 0.5);
 			color: #fff;
-			max-width: 40rem; 
+			width: 40rem; max-width: 90%;
 			margin: 40px auto;
 		}
 
@@ -39,37 +39,43 @@
 			display: inline-block;
 			font-size: 2.5rem;
 			font-weight: 100;
-			transform: translate(0, -1rem);
+			transform: translateY(-1rem);
 			width: 23rem;
+		}
+
+		.description {
+			color: #ddd;
+			font-weight: 300;
 		}
 
 		select {
 			color: #000;
 		}
 
-		@media (min-width: 35em) {
+		option { font-size: .6rem; }
+
+		input[type=radio] {
+			position: static !important;
+			visibility: visible !important;
+			opacity: 0;
+			transform: translate(2.4rem, 1rem);
+			height: 16px;
+			width: 16px;
+		}
+
+
+		@media (min-width: 981px) {
+			html {
+				
+			}
+
 			#form-title, #form-title span {
 				text-align: left;
 			}
+
+			option { font-size: 1rem; }
 		}
 	</style>
-
-	<script type="text/javascript">
-		function showfield(major){
-			var text = document.getElementsByClassName('major-text');
-			var drop = document.getElementById('major-drop');
-			if (major == "Others" || major == "Major") {
-				for (i=0; i<text.length; i++) {
-					text[i].style.display="block";
-				}
-				drop.style.display="none";
-			} else {
-				for (i=0; i<text.length; i++) {
-					text[i].style.display="none";
-				}
-			}
-		}
-	</script>
 </head>
 
 <body>
@@ -79,50 +85,66 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<div id="form-title"><img src="http://codejam.mcgilleus.ca/img/header/title_flat.png"><span>2016 Registration</span></div>
-					<p class="form-description">Description of CodeJam, link to Tilt etc.</p>
+					<p class="description">
+					Guess who's back!!! CodeJam is happening from November 18-20th 2016. <br> 
+					This year's theme is: Human-Computer Interaction! <br>
+					Sign up in teams of 2-4 for either the Junior or Senior challenge. <br><br>
+					YES that's right, there will be two categories of challenges this year: Junior and Senior!! <br>
+					If you are beginner or have never participated in a hackathon then the Junior Challenge is perfect for you! <br>
+					If you have been coding since before you could walk then the Senior challenge is for you. <br><br>
+					Tickets are $15 per person and include: <br>
+					+ a sick T-shirt, <br>
+					+ 3 days of food, <br>
+					+ an epic weekend to tell your grandchildren about!
+					</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input type="text" id="fname" class="validate required" required="" aria-required="true" name="First" value="">
-					<label for="fname">First Name</label>
+					<input type="text" id="fname" class="validate" name="First" value="" required>
+					<label for="fname">First Name <span class="red-text">(required)</span></label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input type="text" id="lname" class="validate required" required="" aria-required="true" name="Last" value="">
-					<label for="lname">Last Name</label>
+					<input type="text" id="lname" class="validate" name="Last" value="" required >
+					<label for="lname">Last Name <span class="red-text">(required)</span></label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input type="email" id="email" class="validate required" required="" aria-required="true" name="Email" value="">
-					<label for="email" data-error="invalid_email">Email</label>
+					<input type="email" id="email" class="validate"  name="Email" value="" required>
+					<label for="email" data-error="invalid_email">Email <span class="red-text">(required)</span></label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<select id="major-drop" class="validate required browser-default" required="" aria-required="true" name="Major" onchange="showfield(this.value)">
-						<option value="" disabled selected>Major</option>
+					<select id="major-drop" class="validate required browser-default" name="Major1" onchange="showfield(this.value)" required>
+						<option value="" disabled selected>Major <span class="red-text">(required)</span></option>
 						<option value="Electrical">Electrical</option>
 						<option value="Computer">Computer</option>
 						<option value="Software">Software</option>
 						<option value="Comp Sci">Comp Sci</option>
 						<option value="Others">Others</option>
 					</select>
-					<input style="display:none;" type="text" id="others" class="validate major-text" required="" aria-required="true" name="Major" value="">
-					<label style="display:none;" for="major-text" class="major-text">Major</label>
 				</div>
 			</div>
 
+			<div id="input-major" class="row" style="display:none;">
+				<div class="input-field col s12">
+					<input type="text" id="others" class="major-text" name="Major2" value="" novalidate>
+					<label for="others" class="major-text">Major <span class="red-text">(required)</span></label>
+				</div>
+				</div>
+
 			<div class="row">
 				<div class="input-field col s12">
-					<select id="year" name="Year" class="validate required browser-default" required="" aria-required="true">
-						<option value="" disabled selected>Year</option>
+					<select id="year" name="Year" class="validate required browser-default" required>
+						<option value="" disabled selected>Year <span class="red-text">(required)</span></option>
 						<option value="U0">U0</option>
 						<option value="U1">U1</option>
 						<option value="U2">U2</option>
@@ -134,13 +156,13 @@
 
 			<div class="row">
 				<div class="input-field col s12">
-					<p>Challenge Type</p>
+					<p>Challenge Type <span class="red-text">(required)</span></p>
 					<div>
-						<input type="radio" id="challenge-junior" class="validate required" required="" aria-required="true" name="Challenge" value="Junior">
+						<input type="radio" id="challenge-junior" class="validate" name="Challenge" value="Junior" required>
 						<label for="challenge-junior">Junior</label>
 					</div>
 					<div>
-						<input type="radio" id="challenge-senior" class="validate required" required="" aria-required="true" name="Challenge" value="Senior">
+						<input type="radio" id="challenge-senior" class="validate" name="Challenge" value="Senior">
 						<label for="challenge-senior">Senior</label>
 					</div>
 				</div>
@@ -148,15 +170,15 @@
 
 			<div class="row">
 				<div class="input-field col s12">
-					<input type="text" id="team" class="validate required" required="" aria-required="true" name="Team" value="">
-					<label for="team">Team Name</label>
+					<input type="text" id="team" class="validate" name="Team" value="" required>
+					<label for="team">Team Name (Teams of 2-4) <span class="red-text">(required)</span></label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
-					<select id="shirt" required="" aria-required="true" class="validate required browser-default" name="Tshirt">
-						<option value="" disabled selected>T-shirt size</option>
+					<select id="shirt" class="validate required browser-default" name="Tshirt" required>
+						<option value="" disabled selected>T-shirt size <span class="red-text">(required)</span></option>
 						<option value="S">S</option>
 						<option value="M">M</option>
 						<option value="L">L</option>
@@ -167,31 +189,35 @@
 
 			<div class="row">
 				<div class="input-field col s12">
-					<p for="Payment">Payment</p>
+					<p for="Payment">Payment <span class="red-text">(required)</span></p>
+					<p class="description">
+						Pay in cash in the ECSESS Lounge (Trottier 1080). <br> 
+						Tilt Link: TBA
+					</p>			
 					<div>
-						<input type="radio" id="payment-tilt" class="validate required" required="" aria-required="true" name="Payment" value="Tilt">
+						<input type="radio" id="payment-tilt" class="validate" name="Payment" value="Tilt" required>
 						<label for="payment-tilt">Tilt</label>
 					</div>
 					<div>
-						<input type="radio" id="payment-cash" class="validate required" required="" aria-required="true" name="Payment" value="Cash">
+						<input type="radio" id="payment-cash" class="validate" name="Payment" value="Cash" required>
 						<label for="payment-cash">Cash</label>
-					</div>
+					</div>					
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field col s12">
 					<textarea type="textarea" id="comments" class="validate materialize-textarea" name="Comments" value=""></textarea>
-					<label for="comments">Comments</label>
+					<label for="comments">Leave comments about your dietary restrictions, allergies, etc.</label>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="file-field input-field col s12">
-					<p>Resume</p>
+					<p>Resume <span class="red-text">(required)</span></p>
 					<div class="btn">
 						<span>Browse</span>
-						<input id="files" type="file">
+						<input id="files" type="file" required>
 					</div>
 					<div class="file-path-wrapper">
 						<input class="file-path validate" type="text" placeholder="Select a file on your computer">
@@ -202,7 +228,7 @@
 			<div class="row">
 				<div class="input-field col s6">
 					<button class="waves-effect waves-light btn submit-btn" type="submit" onclick="submitForm(); return false;">Submit</button>
-				</div>   
+				</div>
 			</div>
 
 			<div class="row">
@@ -217,8 +243,25 @@
 		</div>
 	</form>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+	<script type="text/javascript">
+		$("iframe").append('<meta name="viewport" content="width=device-width, initial-scale=1.0"/>');
+
+		function showfield(major){
+			var text = document.getElementsByClassName("major-text");
+			var row = $("#input-major");
+			if (major == "Others" || major == "Major") {
+				row.slideDown();
+				for (i=0; i<text.length; i++) {
+					text[i].setAttribute("required", "");
+				}
+			} else {
+				row.slideUp();
+			}
+		}
+	</script>
 
 	<script>
 
@@ -232,14 +275,14 @@
 			} else {
 				google.script.run
 				.withSuccessHandler(showSuccess)
-				.uploadFileToGoogleDrive(e.target.result, file.name, $('input#fname').val(), $('input#lname').val());
+				.uploadFileToGoogleDrive(e.target.result, file.name, $("input#fname").val(), $("input#lname").val());
 			}
 		};
 
 		function showSuccess(e) {
 			if (e === "OK") { 
-				$('#forminner').hide();
-				$('#success').show();
+				$("#forminner").hide();
+				$("#success").show();
 			} else {
 				showError(e);
 			}
@@ -247,15 +290,12 @@
 
 		function submitForm() {
 
-			var required = $(".required");
-			for (i=0; i<required.length; i++) {
-				if (required[i].value == null || required[i].value == "") {
-					showError("Missing required fields: " + required[i].name);
-					return false;
-				}
+			var form = $("#form");
+			if (!form[0].checkValidity()) {
+				form.find(':submit').click()
 			}
 
-			var files = $('#files')[0].files;
+			var files = $("#files")[0].files;
 
 			if (files.length === 0) {
 				showError("Please select a file to upload");
@@ -289,17 +329,17 @@
 			
 			google.script.run.addResponseToSheet(q0, q1, q2, q3, q4, q5, q6, q7, q8, q9);
 
-			showMessage("Uploading file..");
+			showMessage("Uploading file...");
 
 			reader.readAsDataURL(file);
 		}
 
 		function showError(e) {
-			$('#progress').addClass('red-text').html(e);
+			$("#progress").addClass("red-text").html(e);
 		}
 
 		function showMessage(e) {
-			$('#progress').removeClass('red-text').html(e);
+			$("#progress").removeClass("red-text").html(e);
 		}
 	</script>
 </body>

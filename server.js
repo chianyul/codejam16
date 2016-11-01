@@ -1,5 +1,7 @@
 function doGet(e) {
-	return HtmlService.createHtmlOutputFromFile('form.html').setTitle("CodeJam 2016 Registration");
+	var output = HtmlService.createHtmlOutputFromFile('form.html').setTitle("CodeJam 2016 Registration");
+	output.addMetaTag("viewport", "width=device-width, initial-scale=1.0");
+	return output;
 }
 
 function uploadFileToGoogleDrive(data, file, fname, lname) {	
@@ -13,10 +15,13 @@ function uploadFileToGoogleDrive(data, file, fname, lname) {
 			folder = DriveApp.createFolder(dropbox);
 		}
 
+		var filename = "Resume -" + [fname, lname].join(" ");
+		
 		var contentType = data.substring(5,data.indexOf(';')),
 		bytes = Utilities.base64Decode(data.substr(data.indexOf('base64,')+7)),
-		blob = Utilities.newBlob(bytes, contentType, file),
-		file = folder.createFolder([fname, lname].join(" ")).createFile(blob);
+		blob = Utilities.newBlob(bytes, contentType, filename),
+		// file = folder.createFolder([fname, lname].join(" ")).createFile(blob);
+		file = folder.createFile(blob);
 	
 		return "OK";
 	
