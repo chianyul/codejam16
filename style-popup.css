@@ -1,5 +1,5 @@
 .popup { margin: 10vh 10%; width: 80%; }
-.popup.enlarged { margin: 2.5vh 2.5%; width: 95%; height: 95vh; }
+.popup.enlarged { margin: 2.5vh 2.5%; width: 95%; max-height: 95vh; }
 
 #blurb-container { width: 90%; padding: 1.5rem; }
 
@@ -18,7 +18,7 @@
 .popup {
 	display: none;	
 	border: none;
-	transition: 1s;
+	transition: .5s;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -32,11 +32,12 @@
 	background: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid #ddd;
 	padding: 1rem 0 0 1rem;
+	max-height: 12.5vh
 }
 
 .popup-body {
 	background: rgba(0, 0, 0, 0.8);
-	max-height: 60vh;
+	max-height: 70vh;
 	overflow: auto;
 	padding: 1rem;
 	position: relative;
@@ -63,13 +64,31 @@
 
 #popup-container h4 {
 	color: #fff;
-	font: 300 1rem 'Lato', sans-serif;
+	font: bold 1.2rem 'Lato', sans-serif;
 	margin: 0;
 }
 
 #popup-container p, #popup-container li {
 	color: #ddd;
 	font: 300 1rem/1.5 'Lato', sans-serif;
+}
+
+.popup-choices {
+	text-align: center;
+}
+
+.popup-choice {
+	display: inline-block;
+	vertical-align: middle;
+	height:	16rem; width: 16rem;
+	background: rgba(75, 75, 75, .3);
+	margin: 1rem 3rem;
+	text-decoration: none;
+	border-radius: 50%;
+	transition: .5s;
+}
+.popup-choice:hover {
+	box-shadow: 0 0 .25rem #fff;
 }
 
 .footer-button {
@@ -111,29 +130,6 @@
 
 #Sponsorspop .popup-body { text-align: center; }
 
-#Feedback .popup-body { color: #fff }
-#Feedback input[type="text"] {
-	display: inline-block;
-	font-size: 1.2rem;
-	margin: 0 1rem;
-}
-#Feedback input[type="text"]:focus {
-	outline: none;
-	box-shadow: 0 0 1rem red;
-}
-#Feedback textarea {
-	font-size: 1.2rem;
-}
-#Feedback textarea:focus {
-	box-shadow: 0 0 1rem red;
-}
-#Feedback-message {
-    height: 5rem;
-    width: 100%;
-    text-align: top;
-}
-
-
 #Team ul {
 	list-style-type: none;
 	margin: 0;
@@ -170,6 +166,10 @@
 			filter: brightness(0) invert(1);
 }
 
+#FAQs p {
+	text-align: justify;
+}
+
 
 /*-----Sponsors-----*/
 #sponsorship-container h1 {
@@ -181,7 +181,7 @@
 }
 
 #wheel {
-	background: rgba(255, 255, 255, .5);
+	background: rgba(255, 255, 255, .75);
 	box-sizing: content-box;
 	box-shadow: inset 0 0 1rem #222, 1px 1px 1rem #000;
 	border-top: .25rem solid maroon;
@@ -269,8 +269,12 @@
 
 @media (min-width: 70rem) {
 	.popup { margin: 10vh 25%; width: 50%; }
-	.popup.enlarged { margin: 2.5vh 5%; width: 90%; height: 95vh; }
+	.popup.enlarged { margin: 2.5vh 5%; width: 90%; max-height: 95vh; }
 	
+	.popup-body {
+		max-height: 60vh;
+	}
+
 	#frame-collection .frame {
 		width: 60%;
 		margin: 0 auto;

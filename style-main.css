@@ -4,10 +4,10 @@
 
 html {
 	background: rgb(50, 45, 40) url("img/background/stars.jpg") no-repeat center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
+	-webkit-background-size: cover;	
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;	
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -123,11 +123,11 @@ a.menu-link { display: block; }
 	width: 100%;
 }
 
-.table p, .table a {
+.table * {
 	color: #fff;
 	display: table-cell;
 	vertical-align: middle;
-	text-align: right;
+	text-align: center;
 	text-decoration: none;
 }
 
@@ -237,8 +237,7 @@ a.menu-link { display: block; }
 
 .thumbnail {
 	border: 1px solid #666;
-	-webkit-border-radius: 0.5rem;
-	   -moz-border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;	   
 			border-radius: 0.5rem;
 	box-shadow: 1px 1px .3em 0 #000; 
 	cursor: pointer;
@@ -257,7 +256,6 @@ a.menu-link { display: block; }
 
 .thumbnail img, .tile-title { 
 	-webkit-border-radius: 0.5rem;
-	   -moz-border-radius: 0.5rem;
 			border-radius: 0.5rem;
 }
 
@@ -335,7 +333,7 @@ a.menu-link { display: block; }
 .schedule-detail {
 	color: #fff;
 	display: none;
-	font: 300 1rem 'Anonymous Pro';
+	font: 300 4vw 'Anonymous Pro';
 	text-align: left;
 }
 
@@ -392,7 +390,7 @@ a.menu-link { display: block; }
 	.active-day { font-size: 6vw; }
 
 	.schedule-detail { 
-		font-size: 1rem;
+		font-size: 2.5vw;
 		margin: 2rem; 
 	}
 }

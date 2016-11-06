@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     // Clicking menu icon
     $icon.on("click", function() {
-        $(".popup").fadeOut();
+        $(".popup").fadeOut(300);
     	$layer.fadeToggle();
     	$icon.toggleClass("icon-hover");
     	$menu.slideToggle();
@@ -16,16 +16,18 @@ $(document).ready(function() {
 	$(".pop").on("click", pop_out);
 
     function pop_out() {
-        $(".popup").fadeOut();
+        $(".popup").fadeOut(300);
         $icon.removeClass("icon-hover");
         $menu.slideUp();
-    	$layer.fadeIn();
+    	$layer.fadeIn(300);
 
         var popup = $(this).attr("href");
-        if($(window).width() < 720) {
+        if($(window).width() < 1120) {
             $(".popup").addClass("enlarged");
         }
-   		$(popup).fadeIn();
+   		$(popup).fadeIn(300);
+
+        $("html").css("overflow", "hidden");
     }
 
 	$(".exit").on("click", exit);
@@ -40,10 +42,11 @@ $(document).ready(function() {
 
     // Function to fade menu, popup-layer and all popups
 	function exit() {
-    	$(".popup").fadeOut();		
+    	$(".popup").fadeOut(300);		
 		$menu.slideUp();
 		$icon.removeClass("icon-hover");
 		$layer.fadeOut();
+        $("html").css("overflow", "auto");
     }
 
     /*--------- News ----------*/

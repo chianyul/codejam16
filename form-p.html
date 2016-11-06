@@ -1,14 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
-	<base target="_blank">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CodeJam 2016 Registration</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-	<!--<link rel="stylesheet" href="style-form.css"/>-->
-
 	<style type="text/css">
 		html {
 			background: rgb(50, 45, 40) url("http://codejam.mcgilleus.ca/img/background/stars.jpg") no-repeat center fixed; 
@@ -40,19 +37,18 @@
 			font-size: 2.5rem;
 			font-weight: 100;
 			transform: translateY(-1rem);
-			width: 23rem;
+			max-width: 23rem;
 		}
 
 		.description {
 			color: #ddd;
 			font-weight: 300;
+			text-align: justify;    		
 		}
 
 		select {
 			color: #000;
 		}
-
-		option { font-size: .6rem; }
 
 		input[type=radio] {
 			position: static !important;
@@ -62,20 +58,8 @@
 			height: 16px;
 			width: 16px;
 		}
-
-
-		@media (min-width: 981px) {
-			html {
-				
-			}
-
-			#form-title, #form-title span {
-				text-align: left;
-			}
-
-			option { font-size: 1rem; }
-		}
 	</style>
+	<link rel="icon" href="https://googledrive.com/host/0B7vTZzu9mzBDSHkzY1RQMlQ4U0E/brain.png"/>
 </head>
 
 <body>
@@ -157,6 +141,7 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<p>Challenge Type <span class="red-text">(required)</span></p>
+                    <p class="description">Junior challenge follows the same format as the regular Senior challenge, except that Junior challenge will be less demanding to suit students with less programming background. Read more in FAQs.</p>
 					<div>
 						<input type="radio" id="challenge-junior" class="validate" name="Challenge" value="Junior" required>
 						<label for="challenge-junior">Junior</label>
@@ -191,8 +176,8 @@
 				<div class="input-field col s12">
 					<p for="Payment">Payment <span class="red-text">(required)</span></p>
 					<p class="description">
-						Pay in cash in the ECSESS Lounge (Trottier 1080). <br> 
-						Tilt Link: TBA
+						Pay in cash in the ECSESS Lounge (Trottier 1060). <br> 
+						Tilt Link: <a target="_blank" href="https://www.tilt.com/tilts/codejam-2016">https://www.tilt.com/tilts/codejam-2016</a>
 					</p>			
 					<div>
 						<input type="radio" id="payment-tilt" class="validate" name="Payment" value="Tilt" required>
